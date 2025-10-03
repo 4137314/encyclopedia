@@ -1,0 +1,1740 @@
+\documentclass[a4paper,12pt]{report}
+
+% Pacchetti per la matematica e simboli
+\usepackage{amsmath}    % Formule matematiche
+\usepackage{amssymb}    % Simboli matematici
+\usepackage{amsfonts}   % Font matematici
+\usepackage{mathrsfs}   % Scrittura calligrafica matematica
+\usepackage{amsthm}     % Teoremi e definizioni
+
+
+\usepackage{array}
+
+% Pacchetti per grafici e immagini
+\usepackage{graphicx}   % Inclusione grafica
+\usepackage{tikz}       % Disegni e grafici
+\usepackage{pgfplots}   % Grafici avanzati
+\pgfplotsset{compat=1.18} % Imposta compatibilità per pgfplots
+
+% Pacchetti per colori e aspetto
+\usepackage{xcolor}
+\definecolor{darkblue}{rgb}{0.0, 0.2, 0.6}
+\definecolor{gray}{rgb}{0.5, 0.5, 0.5}
+
+% Pacchetti per gestione degli indici e riferimenti
+\usepackage{hyperref}   % Riferimenti ipertestuali
+\hypersetup{
+    colorlinks=true,    % Colori per i link
+    linkcolor=darkblue, % Colore dei link interni
+    citecolor=darkblue, % Colore dei riferimenti alle citazioni
+    filecolor=darkblue, % Colore dei link ai file
+    urlcolor=darkblue,  % Colore degli URL
+    pdftitle={Analisi},
+    pdfpagemode=UseOutlines
+}
+\usepackage{tocbibind}  % Include l'indice e la bibliografia nel sommario
+\usepackage{bookmark}   % Gestione segnalibri PDF
+
+% Pacchetti per impaginazione e formattazione delle sezioni
+\usepackage{titlesec}
+\titleformat{\section}[block]{\large\scshape}{\thesection}{1em}{} % Titoli sezioni maiuscoli
+\titleformat{\subsection}[block]{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[block]{\normalsize\itshape}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[runin]{\normalsize\bfseries}{\theparagraph}{1em}{}[:]
+\titleformat{\subparagraph}[runin]{\normalsize\itshape}{\thesubparagraph}{1em}{}[:]
+
+% Gestione degli spazi nelle sezioni e sottosezioni
+\titlespacing*{\section}{0pt}{12pt}{8pt}
+\titlespacing*{\subsection}{0pt}{10pt}{6pt}
+
+% Teoremi e definizioni formali
+\newtheoremstyle{mystyle} % Definisci lo stile del teorema
+  {10pt} % Spaziatura sopra
+  {10pt} % Spaziatura sotto
+  {\itshape} % Corpo del teorema in corsivo
+  {} % Indentazione del numero
+  {\bfseries} % Font del titolo
+  {}     % Punteggiatura dopo il titolo
+  {\newline} % Spazio dopo il titolo
+  {}     % Stile del testo
+
+\theoremstyle{mystyle}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{definition}[theorem]{Definizione}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollario}
+\newtheorem{proposition}[theorem]{Proposizione}
+
+% Pacchetti per la gestione delle intestazioni e dei piè di pagina
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt} % Altezza dell'intestazione
+\addtolength{\topmargin}{-10pt} % Riduzione del margine superiore
+\pagestyle{fancy}
+\fancyhf{}  % Pulisce intestazione e piè di pagina
+\fancyhead[L]{Analisi}  % Intestazione sinistra
+\fancyhead[R]{\today}         % Intestazione destra
+\fancyfoot[C]{\thepage}       % Numero di pagina al centro
+
+% Impostazioni avanzate dei margini
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=0.8in,        % Margine sinistro
+    right=0.8in,       % Margine destro
+    top=1in,         % Margine superiore
+    bottom=1in,        % Margine inferiore
+    bindingoffset=0.5in % Spazio per eventuale rilegatura
+}
+
+% Pacchetti aggiuntivi
+\usepackage{enumitem}   % Gestione elenchi personalizzati
+\usepackage{multicol}   % Colonne multiple
+\usepackage{booktabs}   % Tabelle professionali
+\usepackage{caption}    % Gestione avanzata delle didascalie
+\captionsetup{
+    labelfont=bf,
+    font=small,
+    labelsep=colon
+}
+\usepackage{emptypage}  % Gestione pagine bianche e capitoli
+
+% Impostazioni di interlinea
+\usepackage{setspace}
+\onehalfspacing  % Interlinea 1.5 per migliorare la leggibilità
+
+% Impostazioni avanzate per sezioni
+\usepackage{appendix}
+\usepackage{tocloft} % Personalizzazione della TOC
+
+\usepackage{comment}
+
+% Personalizzazione delle parti e capitoli
+\titleformat{\part}[display]
+  {\normalfont\huge\bfseries}{}{0pt}{\Huge}[\titlerule]
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{}{0pt}{\Huge}[]
+
+% Informazioni sul documento
+\title{\textbf{Analisi}}
+\author{\textit{Oudeys}}
+\date{\today}
+
+% Inizio del documento
+\begin{document}
+
+% Modifica del titolo dell'indice
+\renewcommand{\contentsname}{Indice}
+
+
+% Pagina del titolo con grafico spettacolare
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}
+    
+    {\Huge\textbf{Analisi}\par}
+    \vspace{0.5cm}
+    {\Large\textit{Oudeys}\par}
+    \vspace{1cm}
+    {\large\today\par}
+
+    \vfill
+    
+    % Aggiunta di un grafico 3D spettacolare con pgfplots nella pagina del titolo
+    \usetikzlibrary{decorations.shapes}
+\begin{comment}
+    \begin{tikzpicture}
+
+        \foreach \i in {0,60,...,300} {
+          \draw[fill=black] (\i:2.3cm) circle (1.6 cm);
+        }
+        
+        
+        \foreach \i in {30,90,...,330} {
+          \draw[fill=black,thick, rotate=\i] (0,0)--(330:3.1cm) .. controls (345:4.3cm) and (355:3.8cm) .. (0:4.2cm) .. controls (5:3.8cm) and (15:4.3cm) .. (30:3.1cm)--cycle;
+        
+          \draw[fill=white,thick, rotate=\i] (0,0)--(330:2.9cm) .. controls (345:4.1cm) and (355:3.6cm) .. (0:4cm) .. controls (5:3.6cm) and (15:4.1cm) .. (30:2.9cm)--cycle;
+        
+          \draw[decorate, decoration={shape backgrounds,shape=circle,shape size=0.5mm,shape sep=1mm}, fill=black, rotate=\i] (330:2.7cm) .. controls (345:3.9cm) and (355:3.4cm) .. (0:3.8cm) .. controls (5:3.4cm) and (15:3.9cm) .. (30:2.7cm);
+        }
+        
+        \foreach \i in {0,60,...,300} {
+          \draw[fill=white] (\i:2.3cm) circle (1.45 cm);
+          \foreach \j in {0,3,6,...,357} {
+            \draw[] (\i:2.3cm) -- +(\j:1.45cm);
+          }
+          \draw[ultra thick, fill=white] (\i:2.3cm) circle (1.25 cm);
+        }
+        
+        \foreach \i in {0,60,...,300} {
+          \foreach \j in {10,50,...,350}{
+            \draw[fill=white,rotate around={\j:(\i:2.5)}] (\i:2.5) ellipse (0.9cm and 0.1cm);
+          }
+          \foreach \j in {0,40,...,320}{
+            \draw[fill=white,rotate around={\j:(\i:2.5)}] (\i:2.5) ellipse (0.9cm and 0.1cm);
+          }
+           \draw[fill=black] (\i-30:2.8cm) circle (0.2 cm);
+        }
+        
+        \foreach \i in {0,60,...,300} {
+          \draw[fill=black] (\i:2.05cm) circle (0.9cm);
+          \foreach \j in {0.8,0.7,...,0.1} {
+            \draw[fill=white] (\i:2.05cm) circle (\j cm);
+          }
+        }
+        
+        \foreach \i in {30,90,...,330} {
+          \draw[fill=white,rotate=\i] (0:2.05cm) circle (0.8cm);
+          \begin{scope}[rotate=\i]
+            \clip (0:2.05cm) circle (0.7cm);
+            \begin{scope}[rotate around={45:(0:2.15cm)}]
+            \foreach \c in {0,1,2,3,4,5,6,7,8} {
+              \foreach \r in {-4,-3,-2,-1,0,1,2,3,4} {
+                \draw[thick, white, fill=black](2.75-0.2*\c,0.2*\r) circle (0.13cm);
+              }
+            }
+            \end{scope}
+          \end{scope}
+        }
+        
+        \foreach \i in {30,90,...,330} {
+          \draw[fill=white] (0,0)--(\i:1.7cm) .. controls (10+\i:2.2cm) and (30+\i:2.2cm) .. (30+\i:2.4cm) .. controls (30+\i:2.2cm) and (50+\i:2.2cm) .. (60+\i:1.7cm);
+        
+          \draw[fill=black] (0,0)--(\i:1.55cm) .. controls (10+\i:2.1cm) and (30+\i:2.1cm) .. (30+\i:2.25cm) .. controls (30+\i:2.1cm) and (50+\i:2.1cm) .. (60+\i:1.55cm);
+        
+          \draw[fill=white] (0,0)--(\i:1.4cm) .. controls (10+\i:2.0cm) and (30+\i:2.0cm) .. (30+\i:2.1cm) .. controls (30+\i:2.0cm) and (50+\i:2.0cm) .. (60+\i:1.4cm);
+        }
+        
+        \foreach \i in {0,60,...,300} {
+          \draw[fill=white] (0,0)--(\i:1.7cm) .. controls (10+\i:2.2cm) and (30+\i:2.2cm) .. (30+\i:2.4cm) .. controls (30+\i:2.2cm) and (50+\i:2.2cm) .. (60+\i:1.7cm);
+        
+          \draw[fill=black] (0,0)--(\i:1.55cm) .. controls (10+\i:2.1cm) and (30+\i:2.1cm) .. (30+\i:2.25cm) .. controls (30+\i:2.1cm) and (50+\i:2.1cm) .. (60+\i:1.55cm);
+        
+          \draw[fill=white] (0,0)--(\i:1.4cm) .. controls (10+\i:2.0cm) and (30+\i:2.0cm) .. (30+\i:2.1cm) .. controls (30+\i:2.0cm) and (50+\i:2.0cm) .. (60+\i:1.4cm);
+        
+          \draw[decorate, decoration={shape backgrounds,shape=circle,shape size=0.4mm,shape sep=0.9mm}, fill=black] (30+\i:1.2cm) circle (0.57cm);
+        }
+        
+        \foreach \i in {0,60,...,300} {
+          \draw[fill=white] (30+\i:1.2cm) circle (0.5cm);
+          \foreach \j in {0,12,...,348} {
+            \draw[thin] (30+\i:1.2cm) --+(\j:0.5cm);
+          }
+        }
+        \foreach \i in {0,60,...,300} {
+          \draw[fill=white] (\i:1.2cm) circle (0.5cm);
+          \foreach \j in {0,12,...,348} {
+            \draw[thin] (\i:1.2cm) --+(\j:0.5cm);
+          }
+        }
+        
+        \foreach \i in {0,20,...,340} {
+          \draw[fill=white] (\i:1.2cm) circle (0.21cm);
+          \draw[fill=black] (\i:1.2cm) circle (0.13cm);
+        }
+        
+        \draw[fill=white] (0,0) circle (1.2cm);
+        \draw[ultra thick] (0,0) circle (0.35cm);
+        \draw[thick] (0,0) circle (0.75cm);
+        \draw[thick] (0,0) circle (1cm);
+        
+        \draw[decorate, decoration={shape backgrounds,shape=circle,shape size=0.5mm,shape sep=0.83mm}, fill=black] (0,0) circle (0.87cm);
+        
+        \foreach \i in {0,10,...,350} {
+          \draw[rotate=\i] (0.35,0)--(0.75,0);
+        }
+        \foreach \i in {0,20,...,340} {
+          \draw[rotate=\i] (1,0)--(1.2,0);
+        }
+        
+        
+        \end{tikzpicture}
+\end{comment}
+    
+    \vfill
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\part{Analisi reale}
+
+\chapter{Calcolo infinitesimale}
+
+\section{Intorni}
+
+\begin{definition}[Distanza]
+    \[d: \mathbb R \to \mathbb R\]
+
+    \begin{enumerate}[label=\roman*.]
+        \[\newline\]
+        \item \( d(x,y) \geq 0 , d(x,y) \Leftrightarrow x=y\)
+        \item \(d(x,y) = d(y,x)\)
+        \item \(d(x,y) \leq d(x,z) + d(z,y)\)
+    \end{enumerate}
+
+\end{definition}
+
+\begin{definition}[Distanza euclidea]
+    \[d_e (x,y) = \lvert x-y \rvert\]
+\end{definition}
+
+\begin{definition}[Intorno sferico]
+    
+\end{definition}
+
+\begin{definition}[Topologia euclidea]
+    
+\end{definition}
+
+\begin{definition}[Punti di estremo]
+    
+\end{definition}
+
+\begin{definition}[Ampliamento di \(\mathbb R\)]
+    
+\end{definition}
+
+\begin{definition}[Intorno sferico di \(+\infty\)]
+    
+\end{definition}
+
+\begin{definition}[Intorno sferico di \(-\infty\)]
+    
+\end{definition}
+
+\begin{definition}[Punto di accumulazione]
+    
+\end{definition}
+
+\begin{lemma}
+    
+\end{lemma}
+
+\begin{theorem}[Teorema di Bolzano-Weierstrass]
+    
+\end{theorem}
+
+\begin{definition}[Proprietà asintotica] % <==> definitivamente per x->x_0
+    
+\end{definition}
+
+\begin{definition}[Punto interno]
+    
+\end{definition}
+
+\begin{definition}[Insieme interno]
+    
+\end{definition}
+
+\begin{definition}[Punto esterno]
+    
+\end{definition}
+
+\begin{definition}[Insieme esterno]
+    
+\end{definition}
+
+\begin{definition}[Punto di frontiera]
+    
+\end{definition}
+
+\begin{definition}[Insieme di frontiera]
+    
+\end{definition}
+
+\begin{definition}[Insieme aperto]
+    
+\end{definition}
+
+\begin{definition}[Insieme chiuso]
+    
+\end{definition}
+
+\begin{theorem}
+    
+\end{theorem}
+
+\section{Limiti}
+
+\begin{definition}[Limite di funzione]
+    
+\end{definition}
+
+\begin{theorem}[Unicità del limite]
+    
+\end{theorem}
+
+\begin{lemma}[Permanenza del segno]
+    
+\end{lemma}
+
+\begin{definition}[Punto di accumulazione destro]
+    
+\end{definition}
+
+\begin{definition}[Punto di accumulazione sinistro]
+    
+\end{definition}
+
+\begin{definition}[Limite destro]
+    
+\end{definition}
+
+\begin{definition}[Limite sinistro]
+    
+\end{definition}
+
+\begin{definition}[Limite per eccesso]
+    
+\end{definition}
+
+\begin{definition}[Limite per difetto]
+    
+\end{definition}
+
+\subsection{\texorpdfstring{Limiti di funzioni (\(\mathbb R \to \mathbb R\))}{Limiti di funzioni (R->R)}}
+
+\begin{proposition}[Limiti di funzioni razionali]
+    \[\newline\]
+    \[
+    \lim_{x \rightarrow +\infty} \frac{a_0 + a_1 x + \ldots + a_n x^n}{b_0 + b_1 x + \ldots + b_m x^m} = 
+    \begin{cases} 
+        \begin{aligned} 
+            &0 & n < m \\ 
+            &\frac{a_n}{b_m} & n = m \\ 
+            &+\infty & \frac{a_n}{b_m} > 0 \,,\, n > m \\ 
+            &-\infty & \frac{a_n}{b_m} < 0 \,,\, n > m 
+        \end{aligned} 
+    \end{cases}
+    \]
+\end{proposition}
+
+
+\[\newline\]
+
+
+
+\begin{proposition}[Limiti di funzioni potenze]
+    \[\newline\]
+    \begin{enumerate}[label=\roman*.]
+        \item \[ \lim_{x \rightarrow 0^+} x^\alpha = \begin{cases} 
+            0 & \alpha > 0 \\ 
+            +\infty & \alpha < 0 
+            \end{cases} \]
+        \item \[ \lim_{x \rightarrow +\infty} x^\alpha = \begin{cases} 
+            +\infty & \alpha > 0 \\ 
+            0 & \alpha < 0 
+            \end{cases} \]
+    \end{enumerate}
+\end{proposition}
+
+\[\newline\]
+
+
+
+\begin{proposition}[Limiti di funzioni esponenziali]
+    \[\newline\]
+    \begin{enumerate}[label=\roman*.]
+        \item \[ \lim_{x \rightarrow + \infty} a^x = \begin{cases} 
+            +\infty & a > 1 \\ 
+            0^+ & 0 < a < 1 
+            \end{cases} \]
+        \item \[ \lim_{x \rightarrow - \infty} a^x = \begin{cases} 
+            0^+ & a > 1 \\ 
+            +\infty & 0 < a < 1 
+            \end{cases} \]
+        \item \[ \lim_{x \rightarrow x_0} f(x)^{g(x)} = \begin{cases}
+            \lim_{x \rightarrow x_0} g(x) \log_{a} f(x) & a \neq e \\ 
+            a^{\lim_{x \rightarrow x_0} g(x) \log_{a} f(x)} & a > 0, a \neq 1 \\ 
+            e^{\lim_{x \rightarrow x_0} g(x) \log_e f(x)} & a = e 
+            \end{cases} \]
+    \end{enumerate}
+\end{proposition}
+
+
+
+\[\newline\]
+
+
+
+\begin{proposition}[Limiti di funzioni logaritmiche]
+    \[\newline\]
+    \begin{enumerate}[label=\roman*.]
+        \item \[\lim_{x \rightarrow 0^+} \log_{a}{x} = 
+        \begin{cases} 
+            -\infty & a>1 \\ 
+            +\infty & 0<a<1 
+        \end{cases}\]
+        \item \[\lim_{x \rightarrow +\infty} \log_{a}{x} = 
+        \begin{cases} 
+            +\infty & a>1 \\ 
+            -\infty & 0<a<1 
+        \end{cases}\]
+    \end{enumerate}
+\end{proposition}
+
+
+\[\newline\]
+
+
+
+\begin{proposition}[Limiti di funzioni composte]
+\(\forall \, \lim_{x \rightarrow x_0} g(x) = y_0 \)
+\[\newline\]
+\[\lim_{x \rightarrow x_0} f(g(x)) = \lim_{y \rightarrow y_0} f(y) \]
+\end{proposition}
+
+\[\newline\]
+
+
+\begin{proposition}[Algebra degli \(o(1)\)]
+    \[\newline\]
+    \begin{multicols}{2}
+    \begin{enumerate}[label=\roman*.]
+        \item \( \forall \, l \in \mathbb{R} : l \cdot o(1) = o(1) \)
+        \item \( 0 \cdot o(1) = o(1) \)
+        \item \( o(1) \cdot o(1) = o(1) \)
+        \item \( o(1) \pm o(1) = o(1) \)
+    \end{enumerate}
+    \end{multicols}
+\end{proposition}
+
+\[\newline\]
+
+
+\begin{proposition}[Limiti di funzioni trigonometriche]
+    \[\newline\]
+    \begin{enumerate}[label=\roman*.]
+        \begin{multicols}{2}
+        \item \(\lim_{x \rightarrow 0} \frac{\sin x}{x} = 1\)
+        \item \(\lim_{x \rightarrow 0} \frac{1- \cos x}{x^2} = \frac{1}{2}\)
+        \item \(\lim_{x \rightarrow 0} \frac{\tan x}{x} = 1\)
+        \item \(\lim_{x \rightarrow 0} \frac{\arcsin x}{x} = 1\)
+        \item \(\lim_{x \rightarrow 0} \frac{\arctan x}{x} = 1\)
+        \item \(\lim_{x \rightarrow -\frac{\pi}{2}^+} \tan x = -\infty\)
+        \item \(\lim_{x \rightarrow +\frac{\pi}{2}^-} \tan x = + \infty\)
+        \end{multicols}
+        \item \(\lim_{x \rightarrow x_0} \arctan x = \begin{cases} 
+            -\frac{\pi}{2} & x_0 = -\infty \\ 
+            \arctan x_0 & x_0 \in \mathbb{R} \\ 
+            \frac{\pi}{2} & x_0 = +\infty 
+        \end{cases}\)
+    \end{enumerate}
+\end{proposition}
+
+
+\[\newline\]
+
+
+\begin{proposition}[Limiti di funzioni notevoli]
+    \[\newline\]
+    \begin{multicols}{2}
+    \begin{enumerate}[label=\roman*.]
+        \item \(\forall \, \alpha \in \mathbb{R},\, a > 1: \lim_{x \rightarrow +\infty} \frac{x^\alpha}{a^x} = 0\)
+        \item \(\lim_{x \rightarrow +\infty} \frac{\lvert \log_b x \rvert^\alpha}{x^\beta} = 0\)
+        \item \(\lim_{x \rightarrow -\infty} a^x \lvert x \rvert^\alpha = 0\)
+        \item \(\lim_{x \rightarrow 0^+} x^\beta \lvert \log_b x \rvert^\alpha = 0\)
+        \item \(\lim_{x \rightarrow \pm \infty} \left( 1 + \frac{1}{x} \right)^x = e\)
+        \item \(\lim_{x \rightarrow 0} ( 1 + x)^{\frac{1}{x}} = e\)
+        \item \(\lim_{x \rightarrow 0} \frac{\log(1 + x)}{x} = 1\)
+        \item \(\lim_{x \rightarrow 0} \frac{e^x - 1}{x} = 1\)
+        \item \(\lim_{x \rightarrow 0} \frac{a^x - 1}{x} = \log a\)
+        \item \(\lim_{x \rightarrow 0} \frac{(1 + x)^\alpha - 1}{x} = 1\)
+    \end{enumerate}
+    \end{multicols}
+\end{proposition}
+
+
+\[\newline\]
+
+\begin{proposition}[Limiti funzioni generalizzate]
+    \[\newline\]
+    \begin{multicols}{2}
+    \begin{enumerate}[label=\roman*.]
+        \item \(\lim_{f(x) \rightarrow 0}  \frac{\sin(f(x))}{f(x)} = 1\)
+        \item \(\lim_{f(x) \rightarrow 0}  \frac{\tan(f(x))}{f(x)} = 1\)
+        \item \(\lim_{f(x) \rightarrow 0} \frac{1-\cos(f(x))}{[f(x)]^2} = \frac{1}{2}\)
+        \item \(\lim_{f(x) \rightarrow 0} \frac{\log[1+f(x)]}{f(x)} = 1\)
+        \item \(\lim_{f(x) \rightarrow 0} \frac{\log_{a}[1+f(x)]}{f(x)} = \log_a e\)
+        \item \(\lim_{f(x) \rightarrow 0} \frac{e^{f(x)}-1}{f(x)} = 1\)
+        \item \(\lim_{f(x) \rightarrow \infty} [1+\frac{1}{f(x)}]^{f(x)} = e\)
+        \item \(\lim_{f(x) \rightarrow 0} [1+f(x)]^{\frac{1}{f(x)}} = e\)
+    \end{enumerate}
+    \end{multicols}
+\end{proposition}
+
+\[\newline\]
+
+
+\begin{proposition}[Limiti delle funzioni infinitesime]
+    \[\newline\]
+    \begin{multicols}{2}
+    \begin{enumerate}[label=\roman*.]
+        \item \(\lim_{x \rightarrow + \infty} \frac{1}{x} = 0\)
+        \item \(\lim_{x \rightarrow - \infty} - \frac{1}{x} = 0\)
+        \item \(\lim_{x \rightarrow x_0 ^+} x-x_0 = 0\)
+        \item \(\lim_{x \rightarrow x_0 ^-} x_0-x = 0\)
+    \end{enumerate}
+    \end{multicols}
+\end{proposition}
+
+
+\[\newline\]
+
+\begin{proposition}[Funzioni infinite]
+    \[\newline\]
+    \begin{multicols}{2}
+    \begin{enumerate}[label=\roman*.]
+        \item \(\lim_{x \rightarrow + \infty} x = +\infty\)
+        \item \(\lim_{x \rightarrow - \infty} -x = +\infty\)
+        \item \(\lim_{x \rightarrow x_0^+} \frac{1}{x-x_0} = +\infty\)
+        \item \(\lim_{x \rightarrow x_0^-} \frac{1}{x_0-x} = +\infty\)
+        \item \(\lim_{x \rightarrow +\infty} \frac{a^x}{x^\alpha} = +\infty\)
+        \item \(\lim_{x \rightarrow +\infty} \frac{(\log_b x)^\beta}{x^\alpha} = 0\)
+    \end{enumerate}
+    \end{multicols}
+\end{proposition}
+
+\[\newline\]
+
+
+\begin{proposition}[Equivalenze asintotiche per \(x \to 0\)]
+    \[\newline\]
+    \begin{multicols}{2}
+    \begin{enumerate}[label=\roman*.]
+        \item \(\sin (\alpha x) \sim \alpha x\)
+        \item \(\tan (\alpha x) \sim \alpha x\)
+        \item \(1 - \cos x \sim \frac{x^2}{2}\)
+        \item \(\log_a (1+x) \sim \frac{x}{\log a}\)
+        \item \(\log(1+x) \sim x\)
+        \item \(a^x - 1 \sim x \log a\)
+        \item \(e^x - 1 \sim x\)
+        \item \(\arcsin x \sim x\)
+        \item \(\arctan x \sim x\)
+        \item \((1 + x)^k - 1 \sim kx\)
+    \end{enumerate}
+    \end{multicols}
+\end{proposition}
+
+\[\newline\]
+
+
+\begin{theorem}[Teorema del confronto]
+    \(\lim_{x \rightarrow x_0} f(x) = \lim_{x \rightarrow x_0} h(x) = l ,\, f(x) \leq g(x) \leq h(x) \)
+    \[\Rightarrow \lim_{x \rightarrow x_0} g(x) = l \]
+\end{theorem}
+
+
+\subsection{\texorpdfstring{Limiti di successioni (\(\mathbb N \to \mathbb{R}\))}{Limiti di successioni (N->R)}}
+
+\begin{proposition}[Gerarchia di infiniti]
+    \(\forall \, n \to \infty\)
+    \[\newline\]
+    \[\log_b n \, (\forall b > 1) \leq n^\alpha \, ( \forall \alpha > 0) \leq r^n \, (\forall n > 1) \leq n! \leq n^n\]
+\end{proposition}
+
+\[\newline\]
+
+\begin{proposition}[Operazioni con i limiti di successioni]
+    \(
+    \forall \, \lim_{n \to +\infty} a_n = a, \ \lim_{n \to +\infty} b_n = b
+    \)
+    \[\newline\]
+    \begin{enumerate}[label=\roman*.]
+        \item   \[\lim_{n \to +\infty} (a_n \pm b_n) = a \pm b\]
+        \item   \[\lim_{n \to +\infty} (a_n \cdot b_n) = ab\]  
+        \item   \(\forall \, b_n \neq 0,\, b \neq 0\)  \[\lim_{n \to +\infty} \frac{a_n}{b_n} = \frac{a}{b}\]
+    \end{enumerate}
+\end{proposition}
+
+\[\newline\]
+
+
+\begin{definition}[Forme indeterminate]
+    \[\newline\]
+    \begin{multicols}{2}
+    \begin{enumerate}[label=\roman*.]
+        \item \( +\infty - \infty \)
+        \item \( +\infty \cdot 0 \)
+        \item \( -\infty \cdot 0 \)
+        \item \( \frac{0}{0} \)
+        \item \( \frac{\infty}{\infty} \)
+        \item \( 0^0 \)
+        \item \( 1^\infty \)
+        \item \( \infty^0 \)
+    \end{enumerate}
+\end{multicols}
+\end{definition}
+
+
+\subsection{\texorpdfstring{Limiti di funzioni a valori vettoriali (\(\mathbb{R}^n \rightarrow \mathbb{R}^m\))}{Limiti di funzioni (R**n->R**m)}}
+
+\begin{definition}[Limiti di funzioni vettoriali]
+\(\forall \,\mathbf{f}(x)=(f_1(\mathbf{x}),f_2(\mathbf{x}),\ldots,f_m(\mathbf{x})) ,\,  l = (l_1,l_2,\ldots,l_m)\)
+
+\[
+    \lim_{\mathbf{x}\rightarrow \mathbf{x}_0} \mathbf{f}(\mathbf{x}) = l \Leftrightarrow
+    \begin{cases}
+         & \lim_{\mathbf{x}\rightarrow \mathbf{x}_0} f_1(\mathbf{x})=l_1 \\
+         & \vdots                                                        \\
+         & \lim_{\mathbf{x}\rightarrow \mathbf{x}_0} f_m(\mathbf{x})=l_m
+    \end{cases}
+\]
+\end{definition}
+
+\subsection{\texorpdfstring{Limiti di funzioni a valori scalari  (\(\mathbb{R}^n \rightarrow \mathbb{R}\))}{Limiti di funzioni (R**n->R)}}
+
+
+
+
+\[\newline\]
+
+\section{Asintoti}
+\begin{definition}[Asintoto orizzontale]
+\(\forall \, \lim_{x \rightarrow \infty} f(x) = l \)
+\[\newline\]
+\[ y=l \]
+\end{definition}
+
+\[\newline\]
+
+\begin{definition}[Asintoto verticale]
+\(\forall \, \lim_{x \rightarrow x_0} f(x) = \infty \)
+\[\newline\]
+\[x = x_0 \]
+\end{definition}
+
+\begin{definition}[Asintoto obliquo]
+\(
+\forall \,
+\begin{aligned}[t]
+    &\lim_{x \rightarrow \infty} f(x) = \infty ,\\
+    &\lim_{x \rightarrow \infty} \frac{f(x)}{x} = \lim_{x \rightarrow \infty} f'(x) = m , \\
+    &\lim_{x \rightarrow \infty} [f(x) - mx] = q
+\end{aligned}
+\)
+\[\newline\]
+\[y = mx +q \]
+\end{definition}
+
+\[\newline\]
+
+
+\section{Continuità}
+\begin{definition}[Continuità in un punto]
+    \[\lim_{x \rightarrow x_0^-} f(x) = \lim_{x \rightarrow x_0^+} f(x) = f(x_0)\]
+\end{definition}
+
+\begin{definition}[Discontinuità di I specie]
+    \[\lim_{x \rightarrow x_0^+} f(x) \neq \lim_{x \rightarrow x_0^-} f(x)\]
+\end{definition}
+
+\begin{definition}[Discontinuità di II specie]
+    \[\lim_{x \rightarrow x_0^{\pm}} f(x) = \pm \infty \lor \nexists\]
+\end{definition}
+
+\begin{definition}[Discontinuità III specie]
+    \[\lim_{x \rightarrow x_0} f(x) \neq f (x_0)\]
+\end{definition}
+
+
+\begin{theorem}[Teorema di Weierstrass]
+    \[f(x) \, \text{continua}\]
+    \[\text{in un intervallo chiuso e limitato} \, [a,b] \Rightarrow \exists x_1,x_2: f(x_1) \leq f(x) \leq f(x_2)\]
+\end{theorem}
+
+
+\begin{theorem}[Teorema di Darboux]
+    \[f(x) \, \text{continua} \, \in [a,b] \Rightarrow \forall c \in (\min_{x \in [a,b]} f(x),\max_{x \in [a,b]} f(x)) \exists x_0 \in [a,b] : f(x_0) = c\]
+\end{theorem}
+
+\begin{theorem}[Teorema degli zeri]
+    \[f(x) \, \text{continua in un intervallo} \, [a,b] , f(a) \cdot f(b) < 0 \Rightarrow c \in [a,b]: f(c) = 0\]
+\end{theorem}
+
+
+\newpage
+
+
+\chapter{Calcolo differenziale}
+
+\section{Derivabilità}
+\begin{definition}[Derivata]
+    \[\frac{d}{dx}f(x_0) = \lim_{h \to 0} \frac{f(x_0 + h) - f(x_0)}{h}\]
+\end{definition}
+
+\begin{theorem}[Teorema di Rolle]
+    \[f(a)=f(b) \Leftrightarrow f'(c)=0\]
+\end{theorem}
+
+\begin{theorem}[Teorema di Cauchy]
+    \[\frac{f(b)-f(a)}{g(b)-g(a)} = \frac{f'(c)}{g'(c)}\]
+\end{theorem}
+
+\begin{theorem}[Teorema di Lagrange]
+    \[f(b)-f(a) = (b-a)f'(c)\]
+\end{theorem}
+
+\begin{theorem}[Teorema di De L'Hopital]
+    \[\lim_{x \rightarrow x_0} \frac{f(x)}{g(x)} = \lim_{x \rightarrow x_0} \frac{f'(x)}{g'(x)} = \frac{f'(x_0)}{g'(x_0)}\]
+\end{theorem}
+
+
+\newpage
+
+
+\section{Calcolo delle derivate}
+
+\subsection{Algebra delle derivate}
+
+\begin{proposition}[Algebra delle Derivate]
+    \[\newline\]
+    %\begin{multicols}{2}
+    \begin{enumerate}[label=\roman*.]
+        \item \((\alpha f)'(x_0) = \alpha f'(x_0)\)
+        \item \((f \pm g)'(x_0) = f'(x_0) \pm g'(x_0)\)
+        \item \((fg)'(x_0) = f'(x_0)g(x_0) + f(x_0)g'(x_0)\)
+        \item \(\left(\frac{f}{g}\right)'(x_0) = \frac{f'(x_0)g(x_0) - f(x_0)g'(x_0)}{(g(x_0))^2}\)
+        \item \((f \circ g)'(x_0) = f'(g(x_0))g'(x_0)\)
+        \item \((f^{-1})'(x_0) = \frac{1}{f'(x_0)}\)
+        \item \((fg)^{(n)}(x_0) = \sum_{k=0}^{n} \binom{n}{k} f^{(n-k)}(x_0)g^{(k)}(x_0)\)
+    \end{enumerate}
+    %\end{multicols}
+\end{proposition}
+
+\[\newline\]
+
+\subsection{Derivate generalizzate}
+\begin{proposition}[Derivate generalizzate]
+    \[\newline\]
+    \begin{multicols}{2}
+    \begin{enumerate}[label=\roman*.]
+        \item \( \frac{d}{dx} \lvert f(x) \rvert = \frac{f(x)}{\lvert f(x) \rvert} \)
+        \item \( \frac{d}{dx} [\log {f(x)}] = \frac{f'(x)}{f(x)} \)
+        \item \( \frac{d}{dx} [\log_a{f(x)}] = \frac{f'(x)}{f(x) \cdot \log(a)} \)
+        \item \( \frac{d}{dx} [a^{f(x)}] = a^{f(x)} \cdot f'(x) \cdot \log(a) \)
+        \item \( \frac{d}{dx} [e^{f(x)}] = e^{f(x)} \cdot f'(x) \)
+        \item \( \frac{d}{dx} [g(x)^{f(x)}] = g(x)^{f(x)} \cdot \frac{d}{dx} [f(x) \cdot \log g(x)] \)
+        \item \( \frac{d}{dx} [f(x)^n] = n \cdot f(x)^{n-1} \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\sqrt[n]{f(x)^p}] = \frac{p \cdot f'(x)}{n \cdot \sqrt[n]{f(x)^{n-p}}} \)
+        \item \( \frac{d}{dx} [\sin (f(x))] = \cos (f(x)) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\cos (f(x))] = -\sin (f(x)) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\tan (f(x))] = (\tan^2 (f(x))+1) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\arcsin (f(x))] = \frac{f'(x)}{\sqrt{1-f^2(x)}} \)
+        \item \( \frac{d}{dx} [\text{arcos} (f(x))] = -\frac{f'(x)}{\sqrt{1-f^2(x)}} \)
+        \item \( \frac{d}{dx} [\arctan (f(x))] = \frac{f'(x)}{f^2(x) + 1} \)
+        \item \( \frac{d}{dx} [\cot (f(x))] = (-\cot^2(f(x)) - 1) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\sinh (f(x))] = \cosh (f(x)) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\cosh (f(x))] = \sinh (f(x)) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\tanh (f(x))] = (1- \tanh^2 (f(x))) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\text{arcsinh} (f(x))] = \frac{f'(x)}{\sqrt{f^2(x) + 1}} \)
+        \item \( \frac{d}{dx} [\text{arccosh} (f(x))] = \frac{f'(x)}{\sqrt{f(x) - 1} \sqrt{f(x) + 1}} \)
+        \item \( \frac{d}{dx} [\text{arctanh} (f(x))] = \frac{f'(x)}{1 - f^2(x)} \)
+        \item \( \frac{d}{dx} [\text{arccot} (f(x))] = -\frac{f'(x)}{f^2(x) + 1} \)
+        \item \( \frac{d}{dx} [\coth (f(x))] = -\frac{f'(x)}{\sinh^2(f(x))} \)
+        \item \( \frac{d}{dx} [\text{arccoth} (f(x))] = \frac{f'(x)}{1 - f^2(x)} \)
+    \end{enumerate}
+    \end{multicols}
+\end{proposition}
+
+\newpage
+
+
+\begin{definition}[Differenziale]
+    \[
+    dy = \frac{d}{dx}f \, dx
+    \]
+\end{definition}
+
+\[\newline\]
+
+\begin{proposition}[Regole di Differenziazione]
+    \[\newline\]
+    \begin{enumerate}[label=\roman*.]
+        \item \( d(f \pm g) = df \pm dg \)
+        \item \( d(f \cdot g) = df \cdot g + f \cdot dg \)
+        \item \( d \left ( \frac{f}{g} \right ) = \frac{df \cdot g - f \cdot dg}{g^2} \)
+    \end{enumerate}
+\end{proposition}
+
+
+\[\newline\]
+
+
+\section{Polinomio di Taylor}
+\begin{definition}[Polinomio di Taylor]
+    \[T_n (x) = \sum_{k=0}^n \frac{f^{(k)}(x_0)}{k!}(x-x_0)\]
+\end{definition}
+
+\[\newline\]
+
+\begin{proposition}[Proprietà del Polinomio di Taylor]
+    \[\newline\]
+    \begin{enumerate}[label=\roman*.]
+        \item \( T_n [\alpha f + \beta g , x_0] = \alpha T_n [f, x_0] + \beta T_n [g, x_0] \)
+        \item \( T'_n [f, x_0] = T_{n-1} [f', x_0] \)
+    \end{enumerate}
+\end{proposition}
+
+\[\newline\]
+
+\begin{definition}[Polinomio di Mac Laurin]
+    \[T_n (x) = \sum_{k=0}^n \frac{f^{(k)} (0)}{k!} (x-0)^k\]
+\end{definition}
+
+\[\newline\]
+
+\begin{theorem}[Teorema di Peano]
+    \[T_n (x) = \sum_{k=0}^n \frac{f^{(k)(x_0)}}{k!} (x-x_0)^k\]
+    \[\Leftrightarrow\]
+    \[f(x)=Tn(x) + o((x-x_0)^n) \, \text{per} x \rightarrow x_0\]
+    \[\Leftrightarrow\]
+    \[T_n^{(k)} (x_0) = f^{(k)}(x_0) \forall k=0,1, \ldots , n\]
+\end{theorem}
+
+\subsection{Sviluppi di Maclaurin}
+
+\begin{proposition}[Sviluppi di Maclaurin per funzioni elementari]
+    \[\newline\]
+    \begin{enumerate}[label=\roman*.]
+        \item \( e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots + \frac{x^n}{n!} + o(x^n) \)
+        \item \( \log(1 + x) = x - \frac{x^2}{2} + \frac{x^3}{3} + \ldots + (-1)^{n+1}\frac{x^n}{n} + o(x^n) \)
+        \item \( (1 + x)^\alpha = \sum_{k=0}^n \binom{\alpha}{k}x^k + o(x^n) \)
+        \item \( \sin x = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots + (-1)^n \frac{x^{2n+1}}{(2n+1)!} + o(x^{2n+2}) \)
+        \item \( \cos x = 1 - \frac{x^2}{2} + \frac{x^4}{4!} - \ldots + (-1)^n \frac{x^{2n}}{(2n)!} + o(x^{2n+1}) \)
+        \item \( \arctan x = x - \frac{x^3}{3} + \frac{x^5}{5!} - \ldots + (-1)^n \frac{x^{2n+1}}{2n+1} + o(x^{2n+2}) \)
+        \item \( \sinh x = x + \frac{x^3}{3!} + \frac{x^5}{5!} + \ldots + \frac{x^{2n+1}}{(2n+1)!} + o(x^{2n+2}) \)
+        \item \( \cosh x = 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \ldots + \frac{x^{2n}}{(2n)!} + o(x^{2n+1}) \)
+        \item \( \frac{1}{1+x} = 1 - x + x^2 - x^3 + \ldots + (-1)^nx^n + o(x^n) \)
+        \item \( \sqrt{1+x} = 1 + \frac{x}{2} - \frac{x^2}{8} + \ldots + \frac{(-1)^{n-1}3 \cdot 5 \cdot 7 \cdots (2n-3)}{n! 2^n}x^n + o(x^n) \)
+        \item \( \arcsin x = x + \frac{x^3}{6} + \frac{3}{40}x^5 + \ldots + \frac{3 \cdot 5 \cdot 7 \cdots (2n - 1)}{2 \cdot 4 \cdot 6 \cdots (2n)(2n + 1)}x^{2n+1} + o(x^{2n+2}) \)
+    \end{enumerate}
+\end{proposition}
+
+
+
+
+\newpage    % Analisi 2
+
+\section{Derivate direzionali e parziali di funzioni a valori scalari}
+
+
+\begin{definition}[Derivata direzionale]
+    \[D_{\mathbf{v}}f(\mathbf{x}) = \lim_{t \rightarrow 0} \frac{f(\mathbf{x}+t\mathbf{v})-f(\mathbf{x})}{t}\]
+\end{definition}
+
+\[\newline\]
+
+\begin{definition}[Derivata parziale]
+    \[f_{x_k} = \lim_{t \rightarrow 0} \frac{f(x_1, \ldots, x_k + t, \ldots, x_n)-f(\mathbf{x})}{t}\]
+\end{definition}
+
+\[\newline\]
+
+\begin{definition}[Gradiente]
+    \[\nabla f(\mathbf{x}) = (f_{x_1}(\mathbf{x}), \ldots, f_{x_n} (\mathbf{x}))\]
+\end{definition}
+
+
+\begin{proposition}[Gradiente]
+    \[\newline\]
+    \begin{enumerate}[label=\roman*.]
+        \item \(\nabla (f \circ g)(\mathbf{x}) = f'(g(\mathbf{x})) \cdot \nabla g(\mathbf{x})\)
+        \item \(\nabla (\alpha f + \beta g)(\mathbf{x}) = \alpha \nabla f(\mathbf{x}) + \beta \nabla g(\mathbf{x})\)
+        \item \(\nabla (f \cdot g)(\mathbf{x}) = \nabla f(\mathbf{x}) \cdot g(\mathbf{x}) + f(\mathbf{x}) \cdot \nabla g(\mathbf{x})\)
+        \item \(\nabla \left(\frac{f}{g}\right)(\mathbf{x}) = \frac{\nabla f(\mathbf{x}) \cdot g(\mathbf{x}) - f(\mathbf{x}) \cdot \nabla g(\mathbf{x})}{(g(\mathbf{x}))^2}\)
+    \end{enumerate}
+\end{proposition}
+
+\[\newline\]
+
+\section{Differenziabilità di funzioni a valori scalari}
+
+\subsection{Differenziabilità}
+\begin{definition}[Piano tangente]
+    \[z= f(x_0,y_0) +f_x (x_0, y_0)(x-x_0)+ f_y(x_0,y_0)(y-y_0)\]
+\end{definition}
+
+\[\newline\]
+
+\subsection{Teorema del differenziale totale}
+
+
+\section{Derivate di ordine superiore}
+\subsection{Derivate del secondo ordine}
+\subsection{Funzioni k volte differenziabili}
+
+\subsection{Teorema di Schwarz}
+\begin{definition}[Matrice Hessiana]
+    \[
+        D^2 f(\mathbf{x}) =
+        \begin{bmatrix}
+            f_{x_1x_1}(\mathbf{x}) & f_{x_1x_2}(\mathbf{x}) & \cdots & f_{x_1x_n}(\mathbf{x}) \\
+            f_{x_2x_1}(\mathbf{x}) & f_{x_2x_2}(\mathbf{x}) & \cdots & f_{x_2x_n}(\mathbf{x}) \\
+            \vdots                 & \vdots                 & \ddots & \vdots                 \\
+            f_{x_nx_1}(\mathbf{x}) & f_{x_nx_2}(\mathbf{x}) & \cdots & f_{x_nx_n}(\mathbf{x})
+        \end{bmatrix}
+    \]
+\end{definition}
+
+\[\newline\]
+
+\section{Polinomio di Taylor}
+
+\subsection{\texorpdfstring{\(\text{Polinomio di Taylor di ordine } 2\)}{Polinomio di Taylor di ordine 2}}
+\[T_2(\mathbf{x})= f (\mathbf{x}_0) + \langle \nabla f (\mathbf{x}_0, \mathbf{x}-\mathbf{x}_0)\rangle + \frac{1}{2} \langle D^2 f (\mathbf{x}_0)(\mathbf{x}-\mathbf{x}_0), \mathbf{x}-\mathbf{x}_0 \rangle\]
+
+\[\newline\]
+
+\subsection{\texorpdfstring{\(\text{Polinomio di Taylor di ordine } m\)}{Polinomio di Taylor di ordine m}}
+\[T_m (\mathbf{x}) = f(\mathbf{x}_0) + \sum_{k=1}^{m} \frac{1}{k!} \sum_{i_1, \ldots , i_k =1}^{m} f_{x_{i_1}x_{i_2}\ldots x_{i_k}} (\mathbf{x}_0) (x_{i_1}-x_{0_{i_1}}) \cdots (x_{i_k}-x_{0_{i_k}})\]
+
+\[\newline\]
+
+
+\section{Funzioni convesse e concave}
+\paragraph{\(f: \mathbb{R}^n \rightarrow \mathbb{R}\\\)}
+\(i. \, \text{Convessità}\)
+\[D^2 f (\mathbf{x}) : \lambda_i \geq 0\]
+
+\(ii. \, \text{Concavità}\)
+\[D^2 f (\mathbf{x}) : \lambda_i \leq 0\]
+
+
+\paragraph{\(f: \mathbb{R}^2 \rightarrow \mathbb{R}\\\)}
+\(i. \, \text{Convessità}\)
+\[
+    \begin{cases}
+         & \det D^2 f(\mathbf{x}) = f_{xx} (\mathbf{x}) f_{yy} (\mathbf{x}) -f_{xy}^2 (\mathbf{x}) \geq 0                             \\
+         & f_{xx} \mathbf{x} \geq 0 \, \lor \, f_{yy} (\mathbf{x}) \geq 0 \, \lor \, f_{xx} (\mathbf{x}) + f_{yy} (\mathbf{x}) \geq 0
+    \end{cases}
+\]
+\(ii. \, \text{Concavità}\)\\
+\[
+    \begin{cases}
+         & \det D^2 f(\mathbf{x}) = f_{xx} (\mathbf{x}) f_{yy} (\mathbf{x}) -f_{xy}^2 (\mathbf{x}) \geq 0                             \\
+         & f_{xx} \mathbf{x} \leq 0 \, \lor \, f_{yy} (\mathbf{x}) \leq 0 \, \lor \, f_{xx} (\mathbf{x}) + f_{yy} (\mathbf{x}) \leq 0
+    \end{cases}
+\]
+
+\section{Estremi liberi di funzioni a valori scalari}
+\subsection{Punto critico}
+\[\nabla f (\mathbf{x}) = \mathbf{0}\]
+
+
+\begin{paragraph}{\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)}
+    \(i. \, \text{Massimo}\)
+    \[D^2 f (\mathbf{x}) : \lambda_i \leq 0\]
+
+    \(ii. \, \text{Minimo}\)
+    \[D^2 f (\mathbf{x}) : \lambda_i \geq 0\]
+
+    \(iii. \, \text{Sella}\)
+    \[D^2 f (\mathbf{x}) : \lambda_i \in \mathbb{R}\]
+\end{paragraph}
+
+\begin{paragraph}{\(f: \mathbb{R}^2 \rightarrow \mathbb{R}\)}
+    \(i. \, \textbf{Massimo}\)
+    \[\det D^2 f (\mathbf{x}) > 0 \, \land \, f_{xx} (\mathbf{x}) \geq 0\]
+
+    \(ii. \, \text{Minimo}\)
+    \[\det D^2 f (\mathbf{x}) > 0 \, \land \, f_{xx} (\mathbf{x}) \leq 0\]
+
+    \(iii. \, \text{Sella}\)
+    \[\det D^2 f (\mathbf{x}) < 0\]
+\end{paragraph}
+
+
+
+
+\section{Estremi vincolati}
+\[
+    \begin{cases}
+        \partial_{x_1} f (x_1, \ldots,x_n) = \sum_{i=1}^m \lambda_i \partial_{x_1} g_i(x_1,\ldots, x_n) \\
+        \vdots                                                                                          \\
+        \partial_{x_n} f (x_1, \ldots,x_n) = \sum_{i=1}^m \lambda_i \partial_{x_n} g_i(x_1,\ldots, x_n) \\
+        g_1(x_1, \ldots, x_n) = g_1 (\mathbf{x}_0)                                                      \\
+        \vdots                                                                                          \\
+        g_m (x_1, \ldots,x_n) = g_m(\mathbf{x}_0)
+    \end{cases}
+\]
+
+\[\newline\]
+
+
+\section{Derivabilità e differenziabilità di funzioni a valori vettoriali}
+\[
+    \mathbf{J}_f(\mathbf{x}_0)
+    =
+    \begin{bmatrix}
+        \nabla f_1 (\mathbf{x}) \\
+        \vdots                  \\
+        \nabla f_m (\mathbf{x})
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        \frac{\partial f_1}{\partial x_1}(\mathbf{x}) & \frac{\partial f_1}{\partial x_2}(\mathbf{x}) & \cdots & \frac{\partial f_1}{\partial x_n}(\mathbf{x}) \\
+        \frac{\partial f_2}{\partial x_1}(\mathbf{x}) & \frac{\partial f_2}{\partial x_2}(\mathbf{x}) & \cdots & \frac{\partial f_2}{\partial x_n}(\mathbf{x}) \\
+        \vdots                                        & \vdots                                        & \ddots & \vdots                                        \\
+        \frac{\partial f_m}{\partial x_1}(\mathbf{x}) & \frac{\partial f_m}{\partial x_2}(\mathbf{x}) & \cdots & \frac{\partial f_m}{\partial x_n}(\mathbf{x})
+    \end{bmatrix}
+\]
+
+\newpage
+
+
+\chapter{Calcolo integrale}
+
+\section{Proprietà integrali indefiniti}
+\begin{enumerate}
+    \item[i.] \(\int_a^b (\alpha f(x) + \beta g(x) dx = \alpha \int_a^b f(x) dx + \beta \int_a^b g(x) dx \)
+
+    \item[ii.] \[f \leq g \Rightarrow \int_a^b f(x) dx \leq \int_a^b g(x) dx \]
+
+    \item[iii.] \[\int_a^b f(x) dx = \int_a^c f(x) dx + \int_c^b f(x) dx \]
+
+    \item[iv.] \(\left \lvert \int_a^b f(x) dx \right\rvert \leq \int_a^b \lvert f(x) \rvert dx \)
+
+    \item[v.] \(\int_a^b f(x) dx = - \int_b^a f(x) dx \)
+
+    \item[vi.] \(\int_a^a f(x) dx = 0 \)
+
+    \item[vii.] \(f \leq g \Rightarrow \frac{1}{b-a} \int_a^b f \leq \frac{1}{b-a} \int_a^b g \)
+\end{enumerate}
+
+
+\section{Teorema della media}
+\[f(x) \text{ medio} \in (a,b) = \frac{1}{b-a} \int_a^b f(x) dx\]
+
+\section{Integrazione per parti}
+\[\int f'(x) g(x) dx = f(x)g(x) - \int f(x) g'(x) dx\]
+
+\section{Integrazione per sostituzione}
+\[\\forall x = g(t), dx = g'(t) dt\]
+\[\int_{a=g(\alpha)}^{b=g(\beta)} f(x) dx = \int_\alpha^\beta f(g(t)) g'(t) dt \]
+
+
+\section{Primitive fondamentali}
+\[\int \frac{1}{\sqrt{1 + x^2}} dx = \operatorname{settsinh} x + c= \log (x + \sqrt{1 + x^2}) + c \]
+\[\int \frac{1}{\sqrt{x^2 - 1}} dx = \operatorname{settcosh} x + c = \log (x + \sqrt{x^2 - 1}) + c \]
+\[\int \frac{1}{1 - x^2} dx = \operatorname{setttanh} x + c = \frac{1}{2} \log \frac{1 + x}{1 - x} + c \]
+
+\section{Primitive generalizzate}
+
+
+\begin{proposition}[Derivate generalizzate]
+    \[\newline\]
+    \begin{enumerate}[label=\roman*.]
+        \item \( \frac{d}{dx} \lvert f(x) \rvert = \frac{f(x)}{\lvert f(x) \rvert} \)
+        \item \( \frac{d}{dx} [\log {f(x)}] = \frac{f'(x)}{f(x)} \)
+        \item \( \frac{d}{dx} [\log_a{f(x)}] = \frac{f'(x)}{f(x) \cdot \log(a)} \)
+        \item \( \frac{d}{dx} [a^{f(x)}] = a^{f(x)} \cdot f'(x) \cdot \log(a) \)
+        \item \( \frac{d}{dx} [e^{f(x)}] = e^{f(x)} \cdot f'(x) \)
+        \item \( \frac{d}{dx} [g(x)^{f(x)}] = g(x)^{f(x)} \cdot \frac{d}{dx} [f(x) \cdot \log g(x)] \)
+        \item \( \frac{d}{dx} [f(x)^n] = n \cdot f(x)^{n-1} \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\sqrt[n]{f(x)^p}] = \frac{p \cdot f'(x)}{n \cdot \sqrt[n]{f(x)^{n-p}}} \)
+        \item \( \frac{d}{dx} [\sin (f(x))] = \cos (f(x)) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\cos (f(x))] = -\sin (f(x)) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\tan (f(x))] = (\tan^2 (f(x))+1) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\arcsin (f(x))] = \frac{f'(x)}{\sqrt{1-f^2(x)}} \)
+        \item \( \frac{d}{dx} [\arccos (f(x))] = -\frac{f'(x)}{\sqrt{1-f^2(x)}} \)
+        \item \( \frac{d}{dx} [\arctan (f(x))] = \frac{f'(x)}{f^2(x) + 1} \)
+        \item \( \frac{d}{dx} [\cot (f(x))] = (-\cot^2(f(x)) - 1) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\sinh (f(x))] = \cosh (f(x)) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\cosh (f(x))] = \sinh (f(x)) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\tanh (f(x))] = (1- \tanh^2 (f(x))) \cdot f'(x) \)
+        \item \( \frac{d}{dx} [\text{arcsinh} (f(x))] = \frac{f'(x)}{\sqrt{f^2(x) + 1}} \)
+        \item \( \frac{d}{dx} [\text{arccosh} (f(x))] = \frac{f'(x)}{\sqrt{f(x) - 1} \sqrt{f(x) + 1}} \)
+        \item \( \frac{d}{dx} [\text{arctanh} (f(x))] = \frac{f'(x)}{1 - f^2(x)} \)
+        \item \( \frac{d}{dx} [\text{arccot} (f(x))] = -\frac{f'(x)}{f^2(x) + 1} \)
+        \item \( \frac{d}{dx} [\coth (f(x))] = -\frac{f'(x)}{\sinh^2(f(x))} \)
+        \item \( \frac{d}{dx} [\text{arccoth} (f(x))] = \frac{f'(x)}{1 - f^2(x)} \)
+    \end{enumerate}
+
+\end{proposition}
+
+
+
+
+\section{Integrali impropri}
+
+\subsection{Integrale improprio - generalizzato}
+\[\lim_{\omega \rightarrow a} \int_{\omega}^{b} f(x) dx = F(b) - \lim_{x \rightarrow \omega} F(x)\]
+
+\subsection{Criterio del confronto}
+\[\forall 0 \leq f(x) \leq g(x)\]
+
+\begin{enumerate}
+    \item[i.] \[g  \text{ integrabile in senso improprio}\]
+        \[\Rightarrow f  \text{ integrabile in senso improprio}\]
+
+        \item[ii.]\[f \text{ non integrabile in senso improprio}\]
+        \[\Rightarrow g  \text{ non integrabile in senso improprio}\]
+\end{enumerate}
+
+
+\subsection{Criterio del confronto asintotico}
+\[f(x) = g(x) (1+o(1))\]
+\begin{enumerate}
+    \item[i.] \[\int_a^b f(x) dx \text{ convergente}\]
+        \[\Leftrightarrow\]
+        \[\int_a^b g(x) dx  \text{ convergente}\]
+
+    \item[ii.] \[\int_a^b f(x) dx  \text{ divergente} \]
+        \[\Leftrightarrow\]
+        \[\int_a^b g(x) dx \, \text{divergente}\]
+\end{enumerate}
+
+
+\subsection{Assoluta integrabilità in senso improprio}
+\begin{enumerate}
+    \item[i.] \[f  \text{ assolutamente integrabile in senso improprio}\]
+        \[\Leftrightarrow \]
+        \[\lvert f \rvert \text{ integrabile in senso improprio}\]
+
+    \item[ii.] \[f  \text{ assolutamente integrabile in senso improprio} \]
+        \[\Rightarrow f  \text{ integrabile in senso improprio} : \]
+        \[\lvert \int f(x) dx \rvert \leq \int \lvert f (x) \rvert dx\]
+
+    \item[iii.] \[f  \text{ integrabile in senso improprio} \]
+        \[\nRightarrow\]
+        \[\lvert f \rvert  \text{ integrabile in senso improprio}\]
+\end{enumerate}
+
+
+
+\subsection{Integrali generalizzati all'infinito}
+\[\int_1^\infty \frac{1}{x^\alpha}dx = \begin{cases}+\infty & \alpha \leq 1 \\ \frac{1}{\alpha - 1} & \alpha > 1\end{cases}\]
+
+
+
+\newpage    % ANALISI 2
+\section{Integrali dipendenti da un parametro}
+
+\section{Integrali multipli}
+\subsection{Formule di riduzione per domini semplici}
+\begin{definition}[Dominio \(y\) semplice]
+    \(\Omega = \{(x,y): x \in [a,b], g_1(x) \leq y \leq g_2(x)\}\)
+    \[
+        \int \int _\Omega f = \int_a^b \left(\int_{g_1(x)}^{g_2(x)} f(x,y) dy \right)dx
+    \]
+\end{definition}
+
+\begin{definition}[Dominio \(x\) semplice]
+    \(\Omega = \{(x,y) : y \in [c,d], h_1(y) \leq x \leq h_2(x)\}\)
+    \[
+    \int \int _\Omega f = \int_c^d \left (\int_{h_1(y)}^{h_2(y)} f(x,y) dx \right)dy
+    \]    
+\end{definition}
+
+
+\subsection{Integrazione per sostituzione}
+\begin{definition}[Cambiamento delle variabili di integrazione]
+    \[
+        \int \int _{\mathbf\Psi (S)} f (x,y) dx dy = \int \int _S f (\Psi_1(u,v), \Psi_2(u,v)) \lvert \det \mathbf{J_{\Psi}} (u,v)\rvert du dv
+    \]
+\end{definition}
+
+
+
+\begin{definition}[Coordinate polari]
+    \(
+    \begin{cases}
+        x = \Psi_1(\rho, \phi) = x_0 + \rho \cos \phi \\
+        y = \Psi_2 (\rho, \phi) = y_0 + \rho \sin \phi
+    \end{cases}
+    \) \\
+    \(\mathbf{J_\Psi} =
+        \begin{bmatrix}
+            \cos \phi & - \rho \sin \phi \\
+            \sin \phi & \rho \cos \phi
+        \end{bmatrix}
+        \Rightarrow \lvert \det \mathbf{J_\Psi} \rvert = \rho \cos^2 \phi + \rho \sin^2 \phi = \rho
+    \)
+
+    \[
+    \int \int _{\Omega = \mathbf{\Psi}(S)} f(x,y) dx dy = \int \int _S f (x_0 + \rho \cos \phi, y_0 + \rho \sin \phi) \rho d \rho d \phi
+    \]
+\end{definition}
+
+\begin{definition}[Coordinate ellittiche]
+    \(
+    \begin{cases}
+        x = \Psi_1(\rho,\phi)=x_0 + a \rho \cos \phi \\
+        y = \Psi_2(\rho,\phi)=y_0+b\rho \sin \phi
+    \end{cases}
+    \)\\
+    \(\mathbf{J_\Psi}=
+        \begin{bmatrix}
+            a \cos \phi & - a \rho \sin \phi \\
+            b \sin \phi & b \rho \cos \phi
+        \end{bmatrix}
+        \Rightarrow \lvert \det \mathbf{J_\Psi}\rvert = ab\rho
+    \)
+    \[
+        \int \int _{\Omega = \mathbf{\Psi}(S)} f(x,y) dx dy = \int \int _S f (x_0 + \rho \cos \phi, y_0 + \rho \sin \phi) ab\rho d \rho d \phi
+    \]
+\end{definition}
+
+
+
+\subsection{Integrali tripli}
+\subsubsection{Formule di riduzione per domini semplici}
+\begin{definition}[Integrazione per fili]
+\(\Omega = \{(x,y,z): (x,y) \in E \subseteq \mathbb R^2, g_1(x,y) \leq z \leq g_2(x,y)\}\)
+
+\[
+    \iiint _\Omega f = \iint_E \left(\int_{g_1(x,y)}^{g_2(x,y)} f(x,y,z) dz\right)dxdy
+\]
+\end{definition}
+
+\begin{definition}[Integrazione per strati]
+\(\Omega = \Omega \cap (\mathbb R \times [a,b] \times \mathbb R)\)\\
+\(\Omega_y = \{(x,y)\in \mathbb R^2 : (x,y,z) \in \Omega\}\)
+\[
+    \iiint _\Omega f (x,y,z)dxdydz= \int_a^b \left(\iint_{\Omega_y} f(x,y,z)dxdz\right)dy
+\]
+\end{definition}
+
+\subsubsection{Integrazione per sostituzione}
+\begin{definition}[Cambiamento delle variabili di integrazione]
+\((x,y,z) = \mathbf{\Psi}(u,v,w) = (\Psi_1(u,v,w), \Psi_2 (u,v,w), \Psi_3 (u,v,w))\)\\
+\(
+    \mathbf{J_\Psi}(u,v,w) =
+    \begin{bmatrix}
+        \frac{\partial \psi_1}{\partial u} & \frac{\partial \psi_1}{\partial v} & \frac{\partial \psi_1}{\partial w} \\
+        \frac{\partial \psi_2}{\partial u} & \frac{\partial \psi_2}{\partial v} & \frac{\partial \psi_2}{\partial w} \\
+        \frac{\partial \psi_3}{\partial u} & \frac{\partial \psi_3}{\partial v} & \frac{\partial \psi_3}{\partial w}
+    \end{bmatrix}
+\)
+\[
+    \iiint_{\mathbf{\Psi}(T)} f \, dx\,dy\,dz = \iiint_T (f \circ \mathbf{\Psi}) \, \lvert \det \mathbf{J_\Psi }(u,v,w) \rvert \, du \, dv \, dw
+\]
+\end{definition}
+
+\begin{definition}[Coordinate cilindriche]
+\(
+    \begin{cases}
+        x = \Psi_1 (\rho,\phi,z) = x_0 + \rho \cos \phi \\
+        y = \Psi_2 (\rho,\phi,z) = y_0 + \rho \sin \phi \\
+        z = \Psi_3 (\rho, \phi, z) = z
+    \end{cases}
+\)
+
+\(\mathbf{J_\Psi}(\rho,\phi,z) = \begin{bmatrix}
+        \cos \phi & - \rho \sin \phi & 0 \\
+        \sin \phi & \rho \cos \phi   & 0 \\
+        0         & 0                & 1
+    \end{bmatrix}
+    \Rightarrow \lvert \det \mathbf{J_\Psi} \rvert = \rho
+\)
+\[
+    \iiint_{\Omega = \Psi(S)} f(x,y,z) dx dydz = \iiint_S f (\Psi_1, \Psi_3,z)\, \rho \,d\rho \,d \phi\, dz
+\]
+\end{definition}
+
+\begin{definition}[Coordinate sferiche]
+\[
+    \begin{cases}
+        x = \Psi_1 (\rho,\phi,\theta) = x_0 + \rho \sin \theta \cos \phi \\
+        y = \Psi_2 (\rho,\phi,\theta) = y_0 + \rho \sin\theta \sin\phi   \\
+        z = \Psi_3 (\rho,\phi,\theta) = z_0 + \rho \cos \theta
+    \end{cases}
+\]
+
+\(
+    \mathbf{J_\Psi} =
+    \begin{bmatrix}
+        \sin \theta \, \cos \phi   & - \rho \, \sin \theta \, \sin \phi & \rho \, \cos \theta \, \cos \phi \\
+        \sin \theta \, \sin \theta & \rho \, \sin \theta \cos \phi      & \rho \, \cos \theta \, \sin \phi \\
+        \cos \theta                & 0                                  & - \rho \, \sin \theta
+    \end{bmatrix}
+    \Rightarrow \lvert \det \mathbf{J_\Psi} \rvert = \rho ^2 \, \sin \theta
+\)
+
+\[
+    \iiint_{\Omega = \mathbf{\Psi}(T)} f(x,y,z) \, dx \, dy \, dz = \iiint_T f(\Psi_1, \Psi_2 , \Psi_3) \, \rho^2 \sin \theta \, d\rho \, d\theta \, d\phi
+\]
+\end{definition}
+
+\section{Integrali curvilinei}
+\subsection{Integrali curvilinei di I specie}
+\[
+    \int_\gamma f \,ds = \int_a^b f(\gamma (t)) \lVert \gamma' (t) \rVert \, dt
+\]
+\subsection{Forme differenziali}
+\[
+    \omega = \langle \mathbf{F},d  \mathbf{x} \rangle = F_1 \, dx_1 + \ldots + F_n \, dx_n
+\]
+\subsection{Integrali curvilinei di II specie}
+\[
+    \begin{aligned}
+        \int_\gamma \omega 
+        &= \int_{\mathbf{\gamma}} F_1 \,dx_1 + \ldots + F_n \, dx_n  \\
+        &= \int_a^b \langle \mathbf{F}(\mathbf{\gamma}(t)), \mathbf{\gamma}'(t) \rangle \, dt  \\
+        &= \int_a^b (F_1(\mathbf{\gamma}(t)\gamma'_1(t)+ \ldots + F_n(\mathbf{\gamma}(t))\gamma'_n (t))\, dt
+    \end{aligned}
+\]
+
+\subsection{Funzione potenziale}
+\[\int_\gamma \omega = U (\gamma(a))-U(\gamma(b))\]
+
+\newpage
+
+\section{Integrali di superficie}
+\begin{definition}[Area]
+    \[
+        A (\Sigma) = \iint_D \lVert \mathbf{\sigma}_u (u,v) \wedge \mathbf{\sigma_v} (u,v) \rVert \, du \, dv
+    \]
+\end{definition}
+
+\begin{definition}[Area \(\Sigma\) cartesiana]
+    \[A (\Sigma) = \iint_D \sqrt{1 + f_u^2 (u,v) + f_v^2(u,v)}\, du \, dv\]
+\end{definition}
+
+\[\newline\]
+
+\begin{definition}[Integrale di superficie]
+    \[
+        \iint_\Sigma f \, dS = \iint_D f(\mathbf{\sigma}(u,v))\lVert \mathbf{\sigma}_u (u,v) \wedge \mathbf{\sigma_v} (u,v) \rVert \, du \, dv
+    \]
+\end{definition}
+
+\[\newline\]
+
+\begin{definition}[Flusso di un campo vettoriale attraverso una superficie orientabile]
+    \[
+        \mathbf{\Phi}_{\Sigma^+} (\mathbf{v}) = \iint_\Sigma \langle \mathbf{v}, \mathbf{n}^+\rangle \, dS
+    \]
+\end{definition}
+
+\newpage
+
+\subsection{Divergenza}
+\begin{definition}
+    \[
+        \text{div} \,\mathbf{v} (\mathbf{x}) = \sum_{i=1}^n \frac{\partial v_i}{\partial x_i} (\mathbf{x})
+    \]
+\end{definition}
+
+\[\newline\]
+
+\begin{theorem}[Teorema della divergenza nel piano]
+    \[
+        \iint _\Omega \text{div} \, \mathbf{v}\,dx\,dy = \int_{\partial\Omega} \langle \mathbf{v}, \mathbf{n}_e \rangle\, ds = \int_{\partial \omega^+} v_1 \, dy - v_2 \, dx
+    \]
+\end{theorem}
+
+\[\newline\]
+
+\begin{theorem}[Teorema della divergenza nello spazio]
+    \[
+    \iiint_{\Omega} \text{div} \, \mathbf{v} \, dx\,dy\,dz = \int_{\partial \Omega} \langle \mathbf{v},\mathbf{n}_e\, dS \rangle
+    \]
+\end{theorem}
+
+\newpage
+
+\subsection{Rotore}
+\begin{definition}[Rotore]
+    \[
+        \text{rot}\,  (\mathbf{v}) = \nabla \wedge \mathbf{v} = \det \begin{bmatrix}
+            \mathbf{e}_1                & \mathbf{e}_3                & \mathbf{e}_3                \\
+            \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+            v_1                         & v_2                         & v_3
+        \end{bmatrix}
+    \]
+\end{definition}
+
+\[\newline\]
+
+\begin{theorem}[Teorema del rotore nel piano]
+    \[
+        \iint_{\Omega} \langle \text{rot}\, \mathbf{v}, \mathbf{e}_3 \rangle \, dx \, dy = \int_{\partial \Omega} \langle \mathbf{v}, \mathbf{T}^+\rangle \, ds = \int_{\partial \Omega^+} v_1 \, dx + v_2 \, dy
+    \]
+\end{theorem}
+
+\[\newline\]
+
+\begin{theorem}[Teorema del rotore nello spazio]
+    \[
+    \iint_\Sigma \langle \text{rot}\, \mathbf{v}, \mathbf{n}^+ \rangle\,dS = \int_{\partial \Sigma} \langle \mathbf{v}, \mathbf{T}^+ \rangle \, ds = \int_{\partial \Sigma_+} (v_1\, dx+v_2\,dy + v_3 \, dz)
+    \]
+\end{theorem}
+
+\newpage
+
+
+\chapter{Calcolo delle serie}
+
+
+\section{Serie fondamentali}
+
+\subsection{Proprietà delle serie}
+
+\begin{enumerate}
+    \item[i.] \[\text{Convergenza semplice}\]
+        \[\lim_{n \rightarrow +\infty} s_n = \lim_{n \rightarrow +\infty} \sum_{k=0}^n a_k \]
+        \[\Leftrightarrow s = \sum_{k=0}^\infty a_k \]
+
+    \item[ii.] \[\text{Divergenza}\]
+        \[s_n \rightarrow \pm \infty \]
+
+    \item[iii.] \[\text{Condizione necessaria}\]
+        \[\sum_{k=0}^\infty \,\text{Convergente} \]
+        \[\Rightarrow \lim_{k \rightarrow +\infty} a_k =0 \]
+        \[\lim_{k \rightarrow +\infty} a_k =0 \]
+        \[\nRightarrow \sum_{k=0}^\infty a_k \,\text{Convergente}\]
+
+    \item[iv.]
+        \[\sum_{k=0}^\infty a_k \,,\, \sum_{k=n_0+1}^\infty \,\text{stesso comportamento}\, \forall n_0 \in \mathbb{N} \]
+
+    \item[v.]
+        \[\sum_{k=0}^\infty a_k \, \text{convergente} \]
+        \[\Rightarrow \sum_{k=n_0 +1}^\infty a_k \rightarrow 0 \, \text{per}\, n_0 \rightarrow +\infty \]
+
+    \item[vi.] \[\text{Linearità di } \sum \]
+        \[\sum_{k=0}^\infty a_k \, , \, \sum_{k=0}^\infty b_k \, \text{convergente} \]
+        \[\Rightarrow \sum_{k=0}^\infty (\lambda_1 a_k + \lambda_2 b_k)\, \text{convergente} \]
+        \[\sum_{k=0}^\infty (\lambda_1 a_k + \lambda_2 b_k) = \lambda_1 \sum_{k=0}^\infty a_k + \lambda_2 \sum_{k=0}^\infty b_k \]
+
+    \item[vii.] \[\text{Aritmetica parziale in } \mathbb{R}^+ \]
+        \[\sum_{k=1}^\infty a_k = +\infty \]
+        \[\Rightarrow \sum_{k=1}^\infty (-a_k) = -\infty \]
+        \[\sum_{k=1}^\infty \lambda \cdot a_k = +\infty \, \forall \lambda >0 \]
+        \[\sum_{k=1}^\infty a_k = +\infty \,,\, \sum_{k=1}^\infty b_k =s \neq -\infty\]
+        \[\Rightarrow \sum_{k=1}^\infty (a_k + b_k)=+\infty \]
+
+\end{enumerate}
+
+\subsection{Serie di Mengoli}
+\[\sum_{k=2}^\infty \frac{1}{k(k-1)} = 1 \]
+
+
+\subsection{Serie geometrica}
+\[\sum_{k=0}^\infty r^k = 1 + r + r^2 +\ldots \]
+
+\begin{enumerate}
+    \item[i.] \[\text{Convergenza}\]
+        \[-1 < r < 1 \Rightarrow \sum_{k=0}^\infty r^k = \frac{1}{1-r} \]
+
+    \item[ii.] \[\text{Divergenza}\]
+        \[r \geq 1 \Rightarrow \sum_{k=0}^\infty r^k = +\infty \]
+
+    \item[iii.] \[\text{Irregolarità}\]
+        \[r \leq -1 \]
+
+    \item[iv.] \[\text{Generalizzazione}\]
+        \[-1 < r < 1 \Rightarrow \sum_{k=k_0}^\infty a r^k = \frac{a r^{k_0}}{1-r} \]
+\end{enumerate}
+
+
+\section{Serie a termini positivi}
+
+\subsection{Serie armonica}
+\[\sum_{k=1}^\infty \frac{1}{k} = 1 + \frac{1}{2}+ \frac{1}{3} + \ldots = \infty\]
+
+\subsection{Criterio del confronto per serie a termini positivi}
+\[\forall 0 \leq a_k \leq b_k  \text{ per} \, k \rightarrow + \infty \]
+\begin{enumerate}
+    \item[i.] \[\sum_{k=0}^\infty b_k \, \text{convergente} \Rightarrow \sum_{k=0}^\infty a_k \, \text{convergente} \]
+
+    \item[ii.] \[\sum_{k=0}^\infty a_k = + \infty \Rightarrow \sum_{k=0}^\infty b_k = + \infty \]
+\end{enumerate}
+
+
+\subsection{Serie armonica generalizzata}
+\[\sum_{k=1}^\infty \frac{1}{k^\alpha} = \begin{cases}
+        \text{diverge}  & \text{se } \alpha \leq 1 \\
+        \text{converge} & \text{se } \alpha > 1
+    \end{cases} \]\\
+\[\sum_{k=1}^\infty \frac{1}{k \log^\beta k} = \begin{cases}
+        \text{diverge}  & \text{se } \beta \leq 1 \\
+        \text{converge} & \text{se } \beta > 1
+    \end{cases} \]
+
+
+\subsection{Criterio del confronto asintotico}
+\[a_k \geq 0,\,b\geq \text{ per } \, k \rightarrow +\infty \]
+\[a_k = b_k(1+o(1)) \text{ per } \, k \rightarrow +\infty\]
+\[\Rightarrow \sum_{k=1}^\infty a_k,\, \sum_{k=1}^\infty b_k  \text{ stesso comportamento}\]
+
+
+
+
+\subsection{Criterio del rapporto}
+\begin{enumerate}
+    \item[i.] \[\lim_{k \rightarrow + \infty} a_k > 0\]
+        \[\exists r \in (0,1): \lim_{k \rightarrow + \infty} \frac{a_{k+1}}{a_k} \leq r \]
+        \[
+            \Rightarrow \sum_{k=0}^\infty a_k \, \text{ converge}
+        \]
+
+    \item[ii.] \[\lim_{k \rightarrow +\infty} \frac{a_{k+1}}{a_k} \geq 1\]
+        \[
+            \Rightarrow \sum_{k=0}^\infty a_k = + \infty
+        \]
+
+    \item[iii.] \[\lim_{k\rightarrow +\infty}\frac{a_{k+1}}{a_k} = l \]
+        \[
+            \Rightarrow \sum_{k=0}^\infty a_k
+            \begin{cases}
+                l<1 \Rightarrow \text{convergenza}     \\
+                l>1 \Rightarrow \text{non convergenza} \\
+                l=1 \Rightarrow \text{non si può concludere nulla}
+            \end{cases}
+        \]
+
+    \item[iv.] \[\sum_{k=1}^\infty \frac{1}{k^\alpha} \, \text{converge}\] 
+        \[\Leftrightarrow \alpha > 1
+        \]
+\end{enumerate}
+
+
+\subsection{Criterio della radice}
+\begin{enumerate}
+    \item[i.] \[\exists r \in (0,1): \lim_{k \rightarrow +\infty} \sqrt[k]{a_k} \leq r  \]
+        \[\Rightarrow \sum_{k=0}^\infty a_k \text{ convergente} \]
+
+    \item[ii.] \[\lim_{k \rightarrow +\infty} \sqrt[k]{a_k} \geq 1 \]
+        \[\Rightarrow \sum_{k=0}^\infty a_k = + \infty \]
+
+    \item[iii.] \[\lim_{k \rightarrow +\infty} \sqrt[k]{a_k} = l \]
+        \[\Rightarrow \sum_{k=0}^\infty a_k
+            \begin{cases}
+                l<1 \Rightarrow \text{convergenza} \\
+                l>1 \Rightarrow \text{non converge}
+            \end{cases} \]
+\end{enumerate}
+
+\section{Serie a termini di segno variabile}
+
+\subsection{Convergenza assoluta}
+\[\sum_{k=0}^\infty a_k \, \text{ assolutamente convergente} \]
+\[\Leftrightarrow \]\\
+\[\sum_{k=0}^\infty \lvert a_k \rvert \, \text{ semplicemente convergente} \]
+
+
+\subsection{Criterio di convergenza assoluta}
+\begin{enumerate}
+    \item[i.] \[\sum_{k=0}^\infty a_k \text{ assolutamente convergente }\]
+        \[\Rightarrow \sum_{k=0}^\infty a_k \text{ semplicemente convergente }\]
+        \[\lvert \sum_{k=0}^\infty a_k \rvert \leq \sum_{k=0}^\infty \lvert a_k \rvert\]
+
+    \item[ii.] \[\text{Convergenza assoluta}\]
+        \[\Rightarrow \text{Convergenza semplice} \]
+
+    \item[iii.] \[\text{Convergenza semplice} \]
+        \[\nRightarrow \text{Convergenza assoluta} \]
+
+    \item[iv.] \[\sum_{k=1}^\infty (-1)^{k+1} \frac{1}{k^\alpha} \, \text{ convergente } \, \forall \alpha > 0 \]
+\end{enumerate}
+
+
+\subsection{Serie a termini di segno alterno}
+\[\forall a_k \geq 0 \, \text{ definitivamente per } \, k \rightarrow +\infty \]
+\[\sum_{k=0}^\infty (-1)^k a_k \ \]
+
+
+\subsection{Criterio di Leibniz}
+\[\lim_{k \rightarrow + \infty} a_k =0 \]
+\[\Rightarrow \sum_{k=0}^\infty (-1)^k a_k  \text{ semplicemente convergente}\]
+
+
+
+
+\section{Serie numeriche e integrali impropri}
+\subsection{Criterio integrale per serie a termini positivi}
+\begin{enumerate}
+    \item[i.] \[\sum_{k=k_0}^\infty f(k) \, \text{ convergente} \]
+        \[\Leftrightarrow \]
+        \[\int_{k_0}^{+\infty} f(x) dx \, \text{ convergente} \]
+
+    \item[ii.] \[\sum_{k=k_0}^\infty f(k) \, \text{ divergente}\]
+        \[\Leftrightarrow\]
+        \[\int_{k_0}^{+\infty} f(x) dx \, \text{ divergente} \]
+\end{enumerate}
+
+
+
+
+\section{Serie di Taylor}
+
+\subsection{Serie di Taylor}
+\[\sum_{k=0}^\infty \frac{f^{(k)}(x_0)}{k!}(x-x_0)^k \]
+
+
+\subsection{Sviluppi in serie di Taylor di funzioni elementari}
+
+\begin{proposition}[Serie di Taylor per le funzioni comuni]
+    \[\newline\]
+    \begin{enumerate}[label=\roman*.]
+        \item \( e^x = \sum_{k=0}^\infty \frac{x^k}{k!} \quad \forall x \in \mathbb{R} \)
+        \item \( \sin x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k + 1}}{(2k+1)!} \quad \forall x \in \mathbb{R} \)
+        \item \( \cos x = \sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!} \quad \forall x \in \mathbb{R} \)
+        \item \( \sinh x = \sum_{k=0}^\infty \frac{x^{2k + 1}}{(2k+1)!} \quad \forall x \in \mathbb{R} \)
+        \item \( \cosh x = \sum_{k=0}^\infty \frac{x^{2k}}{(2k)!} \quad \forall x \in \mathbb{R} \)
+        \item \( (1 + x)^\alpha = \sum_{k=0}^\infty \binom{\alpha}{k} x^k \quad \forall x \in (-1,1) \)
+        \item \( \log(1+x) = \sum_{k=1}^\infty \frac{(-1)^{k+1}}{k} x^k \quad \forall x \in (-1,1) \)
+        \item \( \arctan x = \sum_{k=0}^\infty \frac{(-1)^k}{2k+1} x^{2k+1} \quad \forall x \in (-1,1) \)
+    \end{enumerate}
+\end{proposition}
+
+
+
+
+\newpage
+
+\part{Analisi complessa}
+\chapter{Calcolo infinitesimale}
+\chapter{Calcolo differenziale}
+\chapter{Calcolo integrale}
+\chapter{Calcolo delle serie}
+
+\newpage
+
+\part{Analisi armonica}
+\chapter{Trasformata di Laplace}
+
+\chapter{Trasformata di Fourier}
+
+\newpage
+
+\part{Equazioni differenziali}
+\chapter{Equazioni differenziali del I ordine}
+\section{Equazioni differenziali lineari}
+\[y' = a(x)y + b(x) \]
+\[y(x)=e^{A(x)} \int e ^{-A(x)} b(x) dx \]\\
+\[A(x)=\int a(x) dx \]
+
+
+\section{Equazioni differenziali a variabili separabili}
+\[y'=f(x) \cdot g(y) \]\\
+\[\int \frac{1}{g(y)} dy = \int f(x) dx \]
+
+\chapter{Equazioni differenziali del II ordine}
+\section{Equazioni differenziali lineari omogenee a coefficienti costanti}
+\[ay''+by'+cy=\]
+\[\Leftrightarrow\]
+\[a\lambda^2+b \lambda + c = 0\]
+\begin{enumerate}
+    \item[i.] \[\Delta >0\]
+        \[y=c_1e^{\lambda_1 x}+c_2 e^{\lambda_2x}\]
+    \item[ii.] \[\Delta = 0\]
+        \[y=c_1e^{\lambda x}+c_2e^{\lambda x}\]
+    \item[iii.] \[\Delta <0\]
+        \[\lambda_1 = \alpha + i \beta, \lambda_2 = \alpha - i \beta\]
+        \[y=c_1 e^{\alpha x}\cos \beta + c_2 e^{\alpha x}\sin \beta\]
+\end{enumerate}
+
+\chapter{Equazioni differenziali di ordine n}
+
+\newpage
+
+\part{Analisi funzionale}
+
+
+\appendix
+
+\end{document}

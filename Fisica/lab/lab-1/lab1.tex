@@ -1,0 +1,208 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{circuitikz}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{multicol}
+
+\begin{document}
+
+\section{Misura di tensione}
+
+\subsection{Descrizione esperimento}
+Il circuito usato in questo esperimento è composto da un generatore di tensione \(V_s=6 V\)
+collegato a due resistori in serie (\(R_1\) e \(R_2\)).
+
+Lo scopo dell'esperimento è quello di misurare la tensione ai capi del resistore \(R_2\)
+per diverse coppie di \(R_1\) e \(R_2\).
+
+Oltre alle misurazioni, l'esperimento prevede una parte teorica; in questa parte si utilizzeranno le leggi fisiche per ricavare la tensione ai capi di \(R_2\) (per le stesse
+coppie \(R_1\), \(R_2\) utilizzate nell'esperimento).
+
+Infine si confronteranno i dati ottenuti sperimentalmente con i risultati teorici.
+\subsection{Valori teorici e sperimentali delle cadute di potenziale}
+
+\subsection{Stima della resistenza interna del multimetro}
+
+\[
+\begin{aligned}
+    V_{R2}
+    &= \frac{V_s (R_2 \lvert \rvert R_m)}{R_1 + (R_2 \lvert \rvert R_m)} \\
+    \Rightarrow R_m 
+    &= \frac{R_1 R_2 V_{R2}}{R_2(V_s-V_{R2}) -R_1 \cdot V_{R2}}\\
+    &= \frac{1.96 V \cdot 10^{14} ohm ^2}{2.08 V \cdot 10^7 ohm}\\
+    &~ 9.42 Mohm
+\end{aligned}
+\]
+
+\subsection{Osservazione}
+
+Si verifichi il funzionamento del circuito (partitore resistivo) alimentando il circuito con \( V_s = 6 \, \text{V} \).
+Utilizzando il multimetro da banco si verifichi che la tensione ai capi del resistore \( R_2 \) è pari al valore teorico nei seguenti casi.
+
+Programmare il setpoint per la corrente massima erogata dal generatore di tensione a \( I_{\text{max}} = 6 \, \text{mA} \).
+
+
+
+
+
+
+\begin{table}[!ht]
+    \centering
+    \renewcommand{\arraystretch}{1.5} % Aumenta l'altezza delle righe
+    \setlength{\tabcolsep}{12pt} % Aumenta la larghezza delle colonne
+    \caption{Valori sperimentali e teorici delle cadute di potenziale su \( R_2 \)}
+    \begin{tabular}{|c|c|c|}
+    \hline
+    \textbf{Configurazione} & \textbf{Valore sperimentale (V)} & \textbf{Valore teorico (V)} \\
+    \hline
+    \(\begin{cases} R_1 = 1 \, \text{k} \Omega \\ R_2 = 1 \, \text{k} \Omega \end{cases}\) & 2.9998 & 3.0 \\
+    \hline
+    \(\begin{cases} R_1 = 1 \, \text{k} \Omega \\ R_2 = 500 \, \Omega \end{cases}\) & 3.9973 & 2.0 \\
+    \hline
+    \(\begin{cases} R_1 = 10 \, \text{k} \Omega \\ R_2 = 10 \, \text{k} \Omega \end{cases}\) & 2.9930 & 3.0 \\
+    \hline
+    \(\begin{cases} R_1 = 100 \, \text{k} \Omega \\ R_2 = 100 \, \text{k} \Omega \end{cases}\) & 2.9945 & 3.0 \\
+    \hline
+    \(\begin{cases} R_1 = 1 \, \text{M} \Omega \\ R_2 = 1 \, \text{M} \Omega \end{cases}\) & 2.8625 & 3.0 \\
+    \hline
+    \(\begin{cases} R_1 = 10 \, \text{M} \Omega \\ R_2 = 10 \, \text{M} \Omega \end{cases}\) & 1.7665 & 3.0 \\
+    \hline
+    \end{tabular}
+    \end{table}
+
+
+
+\section{Teorema di Millman - Misura di corrente}
+
+\subsection{Teorema di Millman}
+\[V_0 = \frac{\sum_{i=1}^{n} \left(\frac{V_i}{R_i}\right)}{\sum_{i=1}^{n} \left( \frac{1}{R_i}\right)}\]
+
+\subsection{Descrizione esperimento}
+L'esperimento consiste in una serie di misurazioni di tensione e correnti fatte nei punti mostrati in figura(aggiungere quale fig.).
+Si prenda nota che ogni misura riportata in questa sezione è espressa sulla base dei versi e delle polarità riportate in figura.
+
+L'esperimento può essere diviso in una parte teorica e in una parte pratica.
+
+Nella parte teorica si utilizza il teorema di Millman per trovare la tensione ai capi del resistore \(R_4\) (da 10 %\(k \ohm \)) e applicando la legge di Ohm si ricava la corrente che lo attraversa.
+
+Nella parte pratica si utlizza la misura di tensione per confermare il valore calcolato nella parte teorica
+e quindi verificare sperimentalmente il teorema di Millman.
+
+Inoltre, applicando la legge di Ohm è possibile stimare la corrente che attraversa il resistore per confermare, anche in questo caso, il valore teorico.
+
+Infine, si utilizzano le misure di corrente per verificare i risultati sperimentali come viene spiegato nel paragrafo "Stima della corrente di lato del resistore".
+
+\subsubsection{Dati sperimentali}
+
+Accedendo in sequenza tutti e tre i generatori e attendendo qualche istante afficnhe il transitorio dovuto all'accensione svanisca, le misure si stabilizzano sui valori riportati nella tabella.
+\subsection{Applicazione del teorema nel circuito}
+Nell'ambito dell'esperimento possiamo applicare il teorema di Millman per ricavare la tensione di lato del resistore \(R_4\) (da 10 kohm).
+
+In effetti possiamo considerare il collegamento più alto come un'unico nodo in cui si collegano tutti e quattro i resistori.
+Utilizzando il teorema di MIllman possiamo ricavare il potenziale
+
+\subsubsection{Verifica teorica}
+
+\subsection{Stima della corrente di lato per un resistore}
+
+
+Utilizzando la legge di Ohm e il valore della tensione misurato è possibile stimare la correnre che passa attravreso il resistore: \(I_4 = V_4 / R_4 = - 0.32 mA\).
+
+Utilizzando le altre misure di corrente possiamo verificare che la stima calcolata sia giusta.
+
+Infatti per la legge di Kirchhoff sui nodi deve essere che:
+\[
+\begin{aligned}
+  &I_1 + I_2 + I_3 + I_4 = 0 \\
+    &\Rightarrow  4.72 mA + 1.73 mA - 6.14 mA - 0.32 mA = -0.01
+\end{aligned}
+\]
+
+Il risultato è abbastanza vicino allo zero da confermare la legge di Krichhoff e quindi da validare la corrente stimata sul resistore.
+
+\section{Legge di Ohm}
+\subsection{Descrizione esperimento}
+
+Il circuito per questo esperimento consiste in un resistore \(R_1\) da 500 %\ohm \) attaccato ad un generatore di tensione \(V_s\).
+
+L'esperimento consiste nel misurare ripetutamente la corrente che attraversa il resistore, cambiando ogni volta il potenziale ai capi dello stesso.
+
+Le misure hanno lo scopo di verificare sperimentalmente la legge di Ohm.
+I dati relatii alle misurazioni sono riportati in tabella.
+
+
+
+Come si nota dal grafico l'intensità misurata lungo il circuito e la tensione fornita hanno una relazione di tipo lineare.
+
+Con un modello di regressione lineare è possibile trovare una retta che rappresenti al meglio la relazione fra le due grandezze.
+
+La retta che si ricava ha l'equazione \(I = 2.02 \frac{mA}{V} V_s - 0.14 mA\).
+
+Il risulraro ottenuto coincide con la teoria, infatti la retta teorica calcolata a partire dalla legge di Ohm risulta \(I = \frac{V_s}{R} = 2 \frac{mA}{V} V_s\).
+
+\subsection{Diagramma I/V}
+
+\subsection{Relazione corrente-tensione}
+
+\subsection{Stima della resistenza}
+La prima legge di Ohm regola la caduta di potenziale lungo un resistore con l'intensità di corrente:
+\(V=R \cdot I\).
+Per stimare la resistenza del circuito possiamo utilizzare la retta generata dalla regressione lineare, infatti mettendola a sistema con la legge di Ohm possiamo ottenere una formula per \(R_1\).
+\[
+\begin{aligned}
+\begin{cases}
+    I=2.02 \frac{mA}{V} V_s -0.14 mA \\
+    V_s= R_1 I
+\end{cases}
+\Rightarrow R_1 = \frac{V_s}{2.02 \frac{mA}{V}V_s - 0.14 mA}
+\end{aligned}
+\]
+
+
+Utilizzando gli stessi valori \(V_s\) utilizzati per l'esperimento possiamo ricavare alcuni valori della resistenza \(R_1\).
+
+A questo punto possiamo fare una media dei valori trovati e otteniamo che \(R_1 = 512 ohm\).
+
+Lo stesso valore pote
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Tensione (\( V \))} & \textbf{Corrente (\( I \))}  \\
+\hline
+0 V        & 0.180 \(\mu\) A   \\
+0.5 V      & 0.7990 mA  \\
+1 V        & 1.95547 mA \\
+1.5 V      & 2.9315 mA  \\
+2 V        & 3.9068 mA  \\
+2.5 V      & 4.8840 mA  \\
+3 V        & 5.8612 mA  \\
+3.5 V      & 6.8366 mA  \\
+4 V        & 7.8147 mA  \\
+4.5 V      & 8.7913 mA  \\
+5 V        & 9.7705 mA  \\
+5.5 V      & 10.7454 mA \\
+6 V        & 11.7247 mA \\
+6.5 V      & 12.9857 mA \\
+7 V        & 13.9810 mA \\
+7.5 V      & 14.9860 mA \\
+8 V        & 15.9883 mA \\
+\hline
+\end{tabular}
+\caption{Dati di misura del diagramma \( I/V \) del resistore \( R_1 = 500 \, \Omega \)}
+\end{table}
+
+
+\section{Caratteristica \( I/V \) di una lampadina}
+\subsection{Diagramma I/V della lampadina}
+\subsection{Relazione corrente-tensione}
+
+%Osservazioni rispetto punto 3
+\subsection{Osservazioni}
+
+
+
+
+\end{document}

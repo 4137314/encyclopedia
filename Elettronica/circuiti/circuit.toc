@@ -1,0 +1,146 @@
+\contentsline {section}{Contents}{2}{Doc-Start}%
+\contentsline {section}{\numberline {1}Circuiti a parametri concentrati}{6}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Leggi di Kirchhoff}{6}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Legge delle correnti di Kirchhoff}{6}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Legge delle tensioni di Kirchhoff}{6}{subsubsection.1.1.2}%
+\contentsline {section}{\numberline {2}Elementi circuitali}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Resistori}{6}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Resistori lineari}{6}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Resistori non lineari}{7}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Generatori indipendenti}{7}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Generatore di tensione}{7}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Generatore di corrente}{7}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Circuiti equivalenti di Thèvenin e Norton}{7}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}Forme d'onda}{7}{subsubsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.3}Condensatori}{7}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Condensatori lineari}{7}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Condensatori non lineari}{8}{subsubsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.4}Induttori}{8}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}Induttori lineari}{8}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Induttori non lineari}{9}{subsubsection.2.4.2}%
+\contentsline {section}{\numberline {3}Circuiti semplici}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Resistori}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Condensatori}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Induttori}{10}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Circuiti del I ordine}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Risposta con ingresso zero}{11}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Circuito RC (Resistore-Condensatore)}{11}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Circuito RL (Resistore-Induttore)}{11}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Risposta con stato zero}{11}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Ingresso corrente costante}{11}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Ingresso sinusoidale}{11}{subsubsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.3}Risposta completa}{11}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}Risposta completa}{11}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Transitorio e regime}{11}{subsubsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3}Circuiti con due costanti di tempo}{11}{subsubsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.4}Linearità della risposta con stato zero}{11}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Linearità ed invarianza temporale}{11}{subsection.4.5}%
+\contentsline {subsubsection}{\numberline {4.5.1}Risposta al gradino}{11}{subsubsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.2}Invarianza temporale}{11}{subsubsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.3}Traslazione}{11}{subsubsection.4.5.3}%
+\contentsline {subsection}{\numberline {4.6}Risposta all'impulso}{11}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Risposta al gradino e all'impulso per circuiti semplici}{11}{subsection.4.7}%
+\contentsline {section}{\numberline {5}Circuiti del II ordine}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Risposta con ingresso zero}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Risposta con stato zero}{11}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Risposta al gradino}{11}{subsubsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.3}Spazio degli stati}{11}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Equazioni di stato e traiettoria}{11}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Rappresentazione matriciale}{11}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Metodo approssimato per il calcolo della traiettoria}{11}{subsubsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.4}Equazioni di stato e risposta completa}{11}{subsubsection.5.3.4}%
+\contentsline {section}{\numberline {6}Circuiti lineari tempo invarianti}{11}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Analisi dei nodi e delle maglie}{11}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Analisi dei nodi}{11}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Analisi delle maglie}{11}{subsubsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.2}Rappresentazione ingresso-uscita}{11}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Risposta con ingresso zero}{11}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Risposta con stato zero}{11}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Risposta all'impulso}{11}{subsubsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.3}Risposta ad un ingresso arbitrario}{11}{subsection.6.3}%
+\contentsline {subsubsection}{\numberline {6.3.1}Integrale di convoluzione}{11}{subsubsection.6.3.1}%
+\contentsline {section}{\numberline {7}Analisi in regime sinusoidale}{11}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Risposta completa e risposta in regime sinusoidale}{11}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Risposta completa}{11}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Risposta in regime sinusoidale}{11}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}Sovrapposizione nel regime stazionario}{11}{subsubsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.2}Impedenza e ammettenza}{11}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Analisi in regime sinusoidale dei circuiti semplici}{11}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Collegamenti in serie e in parallelo}{11}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Analisi dei nodi e delle maglie in regime sinusoidale}{11}{subsubsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.4}Circuiti risonanti}{11}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Potenza in regime sinusoidale}{11}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Normalizzazione della frequenza e della impedenza}{11}{subsection.7.6}%
+\contentsline {section}{\numberline {8}Elementi di accoppiamento e circuiti accoppiati}{11}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Induttori accoppiati}{11}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Trasformatori ideali}{11}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Generatori pilotati}{11}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Grafi delle reti}{11}{section.9}%
+\contentsline {section}{\numberline {10}Teorema di Tellegen}{11}{section.10}%
+\contentsline {section}{\numberline {11}Analisi dei nodi e degli anelli}{11}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Trasformazioni di generatori}{11}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Analisi dei nodi delle reti lineari tempo-invarianti}{11}{subsection.11.2}%
+\contentsline {subsubsection}{\numberline {11.2.1}Analisi di reti sesistive}{11}{subsubsection.11.2.1}%
+\contentsline {subsubsection}{\numberline {11.2.2}Formulazione rapida delle equazioni dei nodi}{11}{subsubsection.11.2.2}%
+\contentsline {subsubsection}{\numberline {11.2.3}Analisi in regime sinusoidale}{11}{subsubsection.11.2.3}%
+\contentsline {subsubsection}{\numberline {11.2.4}Equazioni integrodifferenziali}{11}{subsubsection.11.2.4}%
+\contentsline {subsection}{\numberline {11.3}Dualità}{11}{subsection.11.3}%
+\contentsline {section}{\numberline {12}Analisi delle maglie e degli insiemi di taglio}{11}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Teorema fondamentale della teoria dei grafi}{11}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Analisi delle maglie}{11}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Analisi degli insiemi di taglio}{11}{subsection.12.3}%
+\contentsline {section}{\numberline {13}Equazioni di stato}{11}{section.13}%
+\contentsline {subsection}{\numberline {13.1}Reti lineari tempo-invarianti}{11}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}Concetto di stato}{11}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}Reti non lineari e tempo-invarianti}{11}{subsection.13.3}%
+\contentsline {subsubsection}{\numberline {13.3.1}Caso lineare tempo-variante}{11}{subsubsection.13.3.1}%
+\contentsline {subsubsection}{\numberline {13.3.2}Caso non lineare}{11}{subsubsection.13.3.2}%
+\contentsline {subsubsection}{\numberline {13.3.3}Equazioni di stato per reti lineari tempo-invarianti}{11}{subsubsection.13.3.3}%
+\contentsline {section}{\numberline {14}Trasformate di Laplace}{12}{section.14}%
+\contentsline {subsection}{\numberline {14.1}Trasformata di Laplace}{12}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}Proprietà fondamentali della trasformata di Laplace}{12}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}Trasformate di Laplace di funzioni elementari}{12}{subsection.14.3}%
+\contentsline {subsection}{\numberline {14.4}Soluzione di circuiti semplici}{13}{subsection.14.4}%
+\contentsline {subsubsection}{\numberline {14.4.1}Calcolo di una risposta all'impulso}{13}{subsubsection.14.4.1}%
+\contentsline {subsubsection}{\numberline {14.4.2}Espansione in frazioni parziali}{15}{subsubsection.14.4.2}%
+\contentsline {subsection}{\numberline {14.5}Soluzione di reti generali}{15}{subsection.14.5}%
+\contentsline {subsubsection}{\numberline {14.5.1}Formulazione di equazioni lineari algebriche}{15}{subsubsection.14.5.1}%
+\contentsline {subsubsection}{\numberline {14.5.2}Metodo del cofattore}{15}{subsubsection.14.5.2}%
+\contentsline {subsubsection}{\numberline {14.5.3}Funzioni di rete e regime sinusoidale}{15}{subsubsection.14.5.3}%
+\contentsline {subsubsection}{\numberline {14.5.4}Proprietà fondamentali delle reti lineari tempo-invarianti}{15}{subsubsection.14.5.4}%
+\contentsline {subsection}{\numberline {14.6}Reti degeneri}{15}{subsection.14.6}%
+\contentsline {subsection}{\numberline {14.7}Condizioni sufficienti per l'unicità}{15}{subsection.14.7}%
+\contentsline {section}{\numberline {15}Frequenze naturali}{15}{section.15}%
+\contentsline {subsection}{\numberline {15.1}Frequenza naturale di una variabile di rete}{15}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2}Metodo di eliminazione}{15}{subsection.15.2}%
+\contentsline {subsection}{\numberline {15.3}Frequenze naturali di una rete}{15}{subsection.15.3}%
+\contentsline {subsection}{\numberline {15.4}Frequenze naturali ed equazioni di stato}{15}{subsection.15.4}%
+\contentsline {section}{\numberline {16}Funzioni di rete}{15}{section.16}%
+\contentsline {subsection}{\numberline {16.1}Definizione e proprietà generali}{15}{subsection.16.1}%
+\contentsline {subsection}{\numberline {16.2}Poli, zeri e risposta in frequenza}{15}{subsection.16.2}%
+\contentsline {subsection}{\numberline {16.3}Poli, zeri e risposta all'impulso}{15}{subsection.16.3}%
+\contentsline {subsection}{\numberline {16.4}Proprietà di simmetria}{15}{subsection.16.4}%
+\contentsline {section}{\numberline {17}Teoremi delle reti}{15}{section.17}%
+\contentsline {subsection}{\numberline {17.1}Teorema di sostituzione}{15}{subsection.17.1}%
+\contentsline {subsection}{\numberline {17.2}Teorema di sovrapposizione}{15}{subsection.17.2}%
+\contentsline {subsection}{\numberline {17.3}Teorema delle reti equivalenti di Thévenin e Norton}{15}{subsection.17.3}%
+\contentsline {subsection}{\numberline {17.4}Teorema di reciprocità}{15}{subsection.17.4}%
+\contentsline {section}{\numberline {18}Doppi bipoli}{15}{section.18}%
+\contentsline {subsection}{\numberline {18.1}Doppi bipoli resistivi}{15}{subsection.18.1}%
+\contentsline {subsection}{\numberline {18.2}Transistore}{15}{subsection.18.2}%
+\contentsline {subsection}{\numberline {18.3}Induttori accoppiati}{15}{subsection.18.3}%
+\contentsline {subsection}{\numberline {18.4}Matrici di impedenza ed ammettenza dei doppi bipoli}{15}{subsection.18.4}%
+\contentsline {subsection}{\numberline {18.5}Matrici ibride}{15}{subsection.18.5}%
+\contentsline {subsection}{\numberline {18.6}Matrici di trasmissione}{15}{subsection.18.6}%
+\contentsline {section}{\numberline {19}Reti resistive}{15}{section.19}%
+\contentsline {subsection}{\numberline {19.1}Reti fisiche e modelli di reti}{15}{subsection.19.1}%
+\contentsline {subsection}{\numberline {19.2}Analisi delle reti resistive dal punto di vista della potenza}{15}{subsection.19.2}%
+\contentsline {subsection}{\numberline {19.3}Guadagno di tensione e guadagno di corrente di rete resistiva}{15}{subsection.19.3}%
+\contentsline {section}{\numberline {20}Energia e passività}{15}{section.20}%
+\contentsline {subsection}{\numberline {20.1}Condensatore lineare tempo-variante}{15}{subsection.20.1}%
+\contentsline {subsection}{\numberline {20.2}Energia immagazzinata in elementi non lineari tempo-varianti}{15}{subsection.20.2}%
+\contentsline {subsection}{\numberline {20.3}Bipoli passivi}{15}{subsection.20.3}%
+\contentsline {subsection}{\numberline {20.4}Ingresso esponenziale e risposta esponenziale}{15}{subsection.20.4}%
+\contentsline {subsection}{\numberline {20.5}Bipoli costituiti di elementi passivi lineari tempo-invarianti}{15}{subsection.20.5}%
+\contentsline {subsection}{\numberline {20.6}Stabilità delle reti passive}{15}{subsection.20.6}%
+\contentsline {subsection}{\numberline {20.7}Amplificatore parametrico}{15}{subsection.20.7}%

@@ -1,0 +1,26 @@
+\contentsline {section}{Contents}{1}{Doc-Start}%
+\contentsline {section}{\numberline {1}Probabilità}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Calcolo combinatorio}{3}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}Disposizioni di \(n\) elementi su \(k\) posti}{3}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}Disposizioni con ripetizione}{3}{subsubsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.3}Permutazioni di \(n\) elementi}{3}{subsubsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.4}Combinazioni di \(n\) elementi presi \(k\) alla volta}{3}{subsubsection.1.1.4}%
+\contentsline {subsubsection}{\numberline {1.1.5}Combinazioni con ripetizione}{3}{subsubsection.1.1.5}%
+\contentsline {subsubsection}{\numberline {1.1.6}Ripartizioni di \(n\) elementi in \(m\) classi}{3}{subsubsection.1.1.6}%
+\contentsline {subsection}{\numberline {1.2}Impostazione assiomatica del calcolo delle probabilità}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Legami stocastici tra eventi}{4}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Probabilità condizionata}{4}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Regola del prodotto}{4}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}Indipendenza stocastica}{4}{subsubsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.4}Formule fondamentali}{4}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Probabilità dell'unione di eventi non incompatibili}{4}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Regola della fattorizzazione}{4}{subsubsection.1.4.2}%
+\contentsline {subsubsection}{\numberline {1.4.3}Teorema di Bayes - Regola della probabilità delle cause}{4}{subsubsection.1.4.3}%
+\contentsline {section}{\numberline {2}Variabili aleatorie}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Variabili aleatorie monodimensionali}{5}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Funzione distribuzione - \(Cdf\)}{5}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Funzione massa di probabilità - \(pmf\)}{5}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Funzione densità di probabilità - \(pdf\)}{5}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2}Variabili aleatorie bidimensionali}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Modelli di variabili aleatorie discrete}{5}{section.3}%
+\contentsline {section}{\numberline {4}Modelli di variabili aleatorie continue}{5}{section.4}%

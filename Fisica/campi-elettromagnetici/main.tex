@@ -1,0 +1,30 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- PREAMBOLO MODULARE ---
+\input{src/preamble.tex}   % include il preambolo da file esterno
+
+\title{Engineering Electromagnetics}
+\author{Mattia Fait}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% --- SEZIONI MODULARI ---
+\input{src/sections/vector-algebra.tex}
+\input{src/sections/vector-calculus.tex}
+\input{src/sections/electric-field.tex}
+\input{src/sections/electric-potential.tex}
+\input{src/sections/boundary-value.tex}
+\input{src/sections/steady-electric-current.tex}
+\input{src/sections/static-magnetic-field.tex}
+\input{src/sections/magnetic-materials-and-properties.tex}
+\input{src/sections/induction.tex}
+\input{src/sections/maxwell-equations.tex}
+\input{src/sections/electromagnetic-waves-and-propagation.tex}
+% \input{src/sections/reflection-and-transmission-of-plane-waves.tex}
+\end{document}
+

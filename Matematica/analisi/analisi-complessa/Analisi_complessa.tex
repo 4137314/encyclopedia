@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{article}
+
+% Pacchetti fondamentali
+\usepackage{amsmath}    % Per le formule matematiche
+\usepackage{amsfonts}   % Per i font matematici
+\usepackage{amssymb}    % Per i simboli matematici
+\usepackage{geometry}   % Per la gestione delle dimensioni della pagina
+\usepackage{fancyhdr}   % Per intestazioni e piè di pagina
+\usepackage{hyperref}   % Per i collegamenti ipertestuali
+\usepackage{multicol}   % Per colonne multiple
+
+
+% Configurazione della pagina
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+% Intestazioni e piè di pagina
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Analisi complessa}
+\fancyhead[R]{\thepage}
+
+% Configurazione di hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={Analisi complessa},
+    pdfpagemode=UseOutlines,
+    pdfauthor={Autore},
+    pdfsubject={Formulario},
+    pdfkeywords={Matematica, Formulario}
+}
+
+% Definizioni di teoremi e definizioni
+\usepackage{amsthm}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{definition}[theorem]{Definizione}
+\newtheorem{corollary}[theorem]{Corollario}
+\newtheorem{lemma}[theorem]{Lemma}
+
+% Nuove macro per simboli comuni
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\begin{document}
+
+\title{Analisi complessa}
+
+\maketitle
+
+\section{Calcolo infinitesimale}
+
+\section{Calcolo differenziale}
+\section{Calcolo integrale}
+
+
+\end{document}
+

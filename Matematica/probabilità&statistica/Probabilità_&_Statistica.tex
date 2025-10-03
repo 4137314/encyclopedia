@@ -1,0 +1,266 @@
+\documentclass[a4paper,12pt]{article}
+
+% Pacchetti per la matematica e simboli
+\usepackage{amsmath}    % Formule matematiche
+\usepackage{amssymb}    % Simboli matematici
+\usepackage{amsfonts}   % Font matematici
+\usepackage{mathrsfs}   % Scrittura calligrafica matematica
+\usepackage{amsthm}     % Teoremi e definizioni
+
+% Pacchetti per grafici
+\usepackage{graphicx}   % Inclusione grafica
+\usepackage{tikz}       % Disegni e grafici
+\usepackage{pgfplots}   % Grafici avanzati
+\pgfplotsset{compat=1.18} % Imposta compatibilità per pgfplots
+
+% Pacchetti per la gestione degli indici e riferimenti
+\usepackage{hyperref}   % Riferimenti ipertestuali
+\hypersetup{
+    colorlinks=true,    % Colori per i link
+    linkcolor=darkblue, % Colore dei link interni
+    citecolor=darkblue, % Colore dei riferimenti alle citazioni
+    filecolor=darkblue, % Colore dei link ai file
+    urlcolor=darkblue,  % Colore degli URL
+    pdftitle={Formulario di Analisi Reale},
+    pdfpagemode=UseOutlines
+}
+\usepackage{tocbibind}  % Include l'indice e la bibliografia nel sommario
+\usepackage{fancyhdr}   % Intestazioni e piè di pagina personalizzati
+\usepackage{bookmark}   % Gestione segnalibri PDF
+
+% Configurazione per intestazioni e piè di pagina
+\setlength{\headheight}{15pt} % Altezza dell'intestazione
+\addtolength{\topmargin}{-10pt} % Riduzione del margine superiore
+
+\pagestyle{fancy}
+\fancyhf{}  % Pulisce intestazione e piè di pagina
+\fancyhead[L]{Formulario di Analisi Reale}  % Intestazione sinistra
+\fancyhead[R]{\today}                      % Intestazione destra
+\fancyfoot[C]{\thepage}                    % Numero di pagina al centro
+
+% Impostazioni dei margini
+\usepackage{geometry}
+\geometry{
+    left=1.2in,
+    right=1.2in,
+    top=1in,
+    bottom=1.2in
+}
+
+% Gestione delle sezioni e sottosezioni
+\usepackage{titlesec}
+\titleformat{\section}[block]{\large\scshape}{\thesection}{1em}{} % Titoli sezioni maiuscoli
+\titleformat{\subsection}[block]{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[block]{\normalsize\itshape}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[runin]{\normalsize\bfseries}{\theparagraph}{1em}{}[:]
+\titleformat{\subparagraph}[runin]{\normalsize\itshape}{\thesubparagraph}{1em}{}[:]
+
+% Colore e aspetto
+\usepackage{xcolor}
+\definecolor{darkblue}{rgb}{0.0, 0.2, 0.6}
+\definecolor{gray}{rgb}{0.5, 0.5, 0.5}
+
+% Teoremi e definizioni formali
+\newtheoremstyle{mystyle} % Definisci lo stile del teorema
+  {10pt} % Spaziatura sopra
+  {10pt} % Spaziatura sotto
+  {\itshape} % Corpo del teorema in corsivo
+  {} % Indentazione del numero
+  {\bfseries} % Font del titolo
+  {}     % Punteggiatura dopo il titolo
+  {\newline} % Spazio dopo il titolo
+  {}     % Stile del testo
+
+\theoremstyle{mystyle}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{definition}[theorem]{Definizione}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollario}
+\newtheorem{proposition}[theorem]{Proposizione}
+
+% Pacchetti aggiuntivi
+\usepackage{enumitem}   % Gestione elenchi personalizzati
+\usepackage{multicol}   % Colonne multiple
+\usepackage{booktabs}   % Tabelle formattate professionalmente
+\usepackage{caption}    % Migliore gestione delle didascalie
+\captionsetup{
+    labelfont=bf,
+    font=small,
+    labelsep=colon
+}
+
+% Impostazioni di line spacing
+\usepackage{setspace}
+\onehalfspacing  % Interlinea 1.5 per migliorare la leggibilità
+
+% Informazioni del documento
+\title{\textbf{Probabilità e Statistica}}
+\author{\textit{Oudeys}}
+\date{\today}
+
+% Inizio del documento
+\begin{document}
+
+\maketitle
+
+
+
+\tableofcontents
+\newpage
+
+\section{Probabilità}
+
+\subsection{Calcolo combinatorio}
+\subsubsection{\texorpdfstring{Disposizioni di \(n\) elementi su \(k\) posti}{Disposizioni di n elementi su k posti}}
+\(\forall \, n \geq k\)
+\[
+    \begin{aligned}
+        D_{n,k} 
+        &= n(n-1)(n-2) \ldots (n-k+1) \\
+        &= \frac{n(n-1)(n-2) \ldots (n-k+1)(n-k)!}{(n-k)!} \\
+        &= \frac{n!}{(n-k)!}
+    \end{aligned}
+\]
+
+\subsubsection{Disposizioni con ripetizione}
+
+\[
+    D_{n,k}^r = n^k    
+\]
+
+\subsubsection{\texorpdfstring{Permutazioni di \(n\) elementi}{Permutazioni di n elementi}}
+\[
+    P_n = D_{n,n} = n!
+\]
+
+\subsubsection{\texorpdfstring{Combinazioni di \(n\) elementi presi \(k\) alla volta}{Combinazioni di n elementi presi k alla volta}}
+\(\forall \, n>k\)
+
+\[
+    \begin{aligned}
+        C_{n,k}
+        & = \frac{D_{n,k}}{k!} \\
+        & = \frac{n!}{k!(n-k)!}
+    \end{aligned}
+\]
+
+\subsubsection{Combinazioni con ripetizione}
+\(\forall \, n>1\)
+\[
+    C_{n,k}^r = \frac{(n+k-1)!}{k!(n-1)!}
+\]
+
+\subsubsection{\texorpdfstring{Ripartizioni di \(n\) elementi in \(m\) classi}{Riprtizioni di n elementi in m classi}}
+\(\sum_{i=1}^{m} k_i = n\)
+
+\[
+    R_{n;k_1,\ldots,k_m} = \frac{n!}{k1! \cdots k_m!}
+\]
+
+\subsection{Impostazione assiomatica del calcolo delle probabilità}
+
+\subsection{Legami stocastici tra eventi}
+\subsubsection{Probabilità condizionata}
+\(\forall \, \Pr\{A\}>0\)
+\[
+    \Pr\{A|B\} = \frac{\Pr\{A \cap B\}}{\Pr\{A\}}
+\]
+
+\subsubsection{Regola del prodotto}
+\[
+    \begin{aligned}
+        \Pr\{A\cap B\}
+        &=\Pr\{A\}\Pr\{B|A\} \\
+        &=\Pr\{B\}\Pr\{A|B\}
+    \end{aligned}
+\]
+
+\subsubsection{Indipendenza stocastica}
+\[
+    \begin{aligned}
+        &\Pr\{A|B\} = \Pr\{A\} \\
+        &\Leftrightarrow \\
+        &\Pr\{B|A\} = \Pr\{B\} \\
+        &\Leftrightarrow \\
+        &\Pr\{A \cap B\} = \Pr\{A\}\Pr\{B\}
+    \end{aligned}
+\]
+
+\subsection{Formule fondamentali}
+\subsubsection{Probabilità dell'unione di eventi non incompatibili}
+\[
+    \Pr\{A \cup B\} = \Pr\{A\} + \Pr\{B\} - \Pr\{A \cap B\}
+\]
+
+\subsubsection{Regola della fattorizzazione}
+\[
+    \begin{aligned}
+    \Pr\{A\}
+    &= \Pr\{A \cap C\} + \Pr\{A \cap \overline C\} \\
+    &= \Pr\{A|C\} \Pr\{C\} + \Pr\{A|\overline C\} \Pr\{\overline C\}
+    \end{aligned}
+\]
+
+\subsubsection{Teorema di Bayes - Regola della probabilità delle cause}
+\(\forall \, \Pr \{E_i\}>0, \, \Pr\{A\}>0\)
+
+\[
+    \Pr \{E_j | A\} = \frac{\Pr \{E_j\} \Pr \{A|E_j\}}{\sum_{i=1}^{n} \Pr \{E_i\} \Pr\{A|E_i\}}
+\]
+
+\section{Variabili aleatorie}
+
+\subsection{Variabili aleatorie monodimensionali}
+\subsubsection{\texorpdfstring{Funzione distribuzione - \(Cdf\)}{Funzione distribuzione - Cdf}}
+\[
+    \begin{aligned}
+        F(x)
+        & = \Pr \{X \leq x\} \\
+        & = F(x^+) \\
+        & = \lim_{\epsilon \rightarrow 0^+} F(x+\epsilon)
+    \end{aligned}
+\] \\
+\(\forall \, x_2 > x_1 : F(x_2) \geq F(x_1)\) \\
+\(\lim_{x \rightarrow -\infty} F(x) = 0\) \\
+\(\lim_{x \rightarrow + \infty} F(x) = 1\) \\
+\(0 \leq F(x) \leq 1\)
+
+\subsubsection{\texorpdfstring{Funzione massa di probabilità - \(pmf\)}{Funzione massa di probabilità - pmf}}
+
+\[
+    \begin{aligned}
+        \Pr\{X=x\}
+        & = F(x) - \lim_{\epsilon \rightarrow 0^+} F(x-\epsilon) \\
+        & = F(x) - F(x^-)
+    \end{aligned}
+\]
+
+\subsubsection{\texorpdfstring{Funzione densità di probabilità - \(pdf\)}{Funzione densità di probabilità - pdf}}
+
+\[
+    \begin{aligned}
+        f(x)
+        &=\lim_{\Delta x \rightarrow 0} \frac{F(x+\Delta x) - F(x)}{\Delta x} \\
+        & = \frac{d}{dx} F(x)
+    \end{aligned}
+\] \\
+
+\(F(x_1) = \int_{X \leq x_1} f(x) dx\) \\
+\(
+    \begin{aligned}
+        \forall x_1 < x_2 : \Pr\{x_1 <X \leq x_2\}
+        & =  F(x_2) - F(x_1) \\
+        & = \int_{x_1}^{x_2} f(x) dx
+    \end{aligned}
+\) \\
+\(\int_{-\infty}^{+\infty} f(x) dx = 1 \) \\
+\(\forall x \in \mathbb R : f(x) \geq 0\)
+
+\subsection{Variabili aleatorie bidimensionali}
+
+\section{Modelli di variabili aleatorie discrete}
+
+\section{Modelli di variabili aleatorie continue}
+
+
+\end{document}

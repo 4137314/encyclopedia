@@ -1,0 +1,64 @@
+\contentsline {section}{Indice}{2}{Doc-Start}%
+\contentsline {part}{I\hspace {1em}Teoria dei segnali}{4}{part.1}%
+\contentsline {section}{\numberline {1}Proprietà dei segnali}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Forme d'onda elementari}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Manipolazione dei segnali}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Statistiche dei segnali}{5}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Sistemi analogici}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Sistemi lineari tempo invarianti}{6}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Risposta dei sistemi LTI}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Convoluzioni notevoli}{6}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Serie di Fourier}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Serie di Fourier}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Coefficienti della serie di Fourier}{8}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Proprietà della serie di Fourier}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Coefficienti di forme d'onda notevoli}{8}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Trasformata di Fourier}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Dalla serie alla Trasformata di Fourier}{10}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Trasformata di Fourier}{10}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Proprietà della trasformata di Fourier}{10}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Trasformate notevoli}{11}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Trasformata di Fourier di segnali periodici}{11}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Energia nel dominio delle frequenze}{12}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Sistemi analogici in frequenza}{13}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Risposta in frequenza}{13}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Composizione di funzioni di trasferimento}{13}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Banda passante di un sistema LTI}{14}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Filtri LTI}{14}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Distorsione e equalizzazione}{16}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Sistemi non distorcenti}{16}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Distorsione lineare}{16}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Equalizzazione}{16}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Distorsioni non lineari}{16}{subsection.6.4}%
+\contentsline {section}{\numberline {7}Conversione AD-DA}{17}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Campionamento ideale}{17}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Spettro del segnale campionato}{17}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Teorema del campionamento}{17}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Ricostruzione del segnale continuo}{17}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Interpolazione dei campioni}{17}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Sample and Hold}{17}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Quantizzazione}{17}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}Rumore di quantizzazione}{18}{subsection.7.8}%
+\contentsline {subsection}{\numberline {7.9}Rapporto segnale-rumore}{18}{subsection.7.9}%
+\contentsline {subsection}{\numberline {7.10}Algoritmo di Lloyd-Max}{18}{subsection.7.10}%
+\contentsline {subsection}{\numberline {7.11}Codificatore PCM}{18}{subsection.7.11}%
+\contentsline {subsection}{\numberline {7.12}Bitrate}{18}{subsection.7.12}%
+\contentsline {subsection}{\numberline {7.13}Modulazione delta}{18}{subsection.7.13}%
+\contentsline {section}{\numberline {8}Sistemi e filtri digitali}{19}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Proprietà dei segnali discreti}{19}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Sistemi numerici LTI}{20}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Impulso di Kronecker}{20}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Risposta all'impulso discreto}{21}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Convoluzione discreta}{21}{subsection.8.5}%
+\contentsline {section}{\numberline {9}Segnali e sistemi digitali in frequenza}{22}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Rappresentazione di segnali discreti in frequenza}{22}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Risposta in frequenza di sistemi discreti}{22}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Segnali e sistemi in più dimensioni}{23}{section.10}%
+\contentsline {part}{II\hspace {1em}Appendice}{25}{part.2}%
+\contentsline {section}{\numberline {A}Trigonometria}{25}{appendix.A}%
+\contentsline {section}{\numberline {B}Derivate}{26}{appendix.B}%
+\contentsline {section}{\numberline {C}Integrali}{27}{appendix.C}%
+\contentsline {section}{\numberline {D}Integrali di convoluzione}{27}{appendix.D}%
+\contentsline {section}{\numberline {E}Serie di Fourier}{27}{appendix.E}%
+\contentsline {section}{\numberline {F}Trasformata di Fourier}{27}{appendix.F}%
+\contentsline {subsection}{\numberline {F.1}Dimostrazione della proprietà di convoluzione della trasformata di Fourier}{28}{subsection.F.1}%

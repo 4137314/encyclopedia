@@ -1,0 +1,207 @@
+\documentclass[a4paper,12pt]{article}
+
+% Pacchetti per la matematica e simboli
+\usepackage{amsmath}    % Formule matematiche
+\usepackage{amssymb}    % Simboli matematici
+\usepackage{amsfonts}   % Font matematici
+\usepackage{mathrsfs}   % Scrittura calligrafica matematica
+\usepackage{amsthm}     % Teoremi e definizioni
+
+% Pacchetti per grafici
+\usepackage{graphicx}   % Inclusione grafica
+\usepackage{tikz}       % Disegni e grafici
+\usepackage{pgfplots}   % Grafici avanzati
+\pgfplotsset{compat=1.18} % Imposta compatibilità per pgfplots
+
+% Pacchetti per la gestione degli indici e riferimenti
+\usepackage{hyperref}   % Riferimenti ipertestuali
+\hypersetup{
+    colorlinks=true,    % Colori per i link
+    linkcolor=darkblue, % Colore dei link interni
+    citecolor=darkblue, % Colore dei riferimenti alle citazioni
+    filecolor=darkblue, % Colore dei link ai file
+    urlcolor=darkblue,  % Colore degli URL
+    pdftitle={Formulario di Analisi Reale},
+    pdfpagemode=UseOutlines
+}
+\usepackage{tocbibind}  % Include l'indice e la bibliografia nel sommario
+\usepackage{fancyhdr}   % Intestazioni e piè di pagina personalizzati
+\usepackage{bookmark}   % Gestione segnalibri PDF
+
+% Configurazione per intestazioni e piè di pagina
+\setlength{\headheight}{15pt} % Altezza dell'intestazione
+\addtolength{\topmargin}{-10pt} % Riduzione del margine superiore
+
+\pagestyle{fancy}
+\fancyhf{}  % Pulisce intestazione e piè di pagina
+\fancyhead[L]{Formulario di Analisi Reale}  % Intestazione sinistra
+\fancyhead[R]{\today}                      % Intestazione destra
+\fancyfoot[C]{\thepage}                    % Numero di pagina al centro
+
+% Impostazioni dei margini
+\usepackage{geometry}
+\geometry{
+    left=1.2in,
+    right=1.2in,
+    top=1in,
+    bottom=1.2in
+}
+
+% Gestione delle sezioni e sottosezioni
+\usepackage{titlesec}
+\titleformat{\section}[block]{\large\scshape}{\thesection}{1em}{} % Titoli sezioni maiuscoli
+\titleformat{\subsection}[block]{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[block]{\normalsize\itshape}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[runin]{\normalsize\bfseries}{\theparagraph}{1em}{}[:]
+\titleformat{\subparagraph}[runin]{\normalsize\itshape}{\thesubparagraph}{1em}{}[:]
+
+% Colore e aspetto
+\usepackage{xcolor}
+\definecolor{darkblue}{rgb}{0.0, 0.2, 0.6}
+\definecolor{gray}{rgb}{0.5, 0.5, 0.5}
+
+% Teoremi e definizioni formali
+\newtheoremstyle{mystyle} % Definisci lo stile del teorema
+  {10pt} % Spaziatura sopra
+  {10pt} % Spaziatura sotto
+  {\itshape} % Corpo del teorema in corsivo
+  {} % Indentazione del numero
+  {\bfseries} % Font del titolo
+  {}     % Punteggiatura dopo il titolo
+  {\newline} % Spazio dopo il titolo
+  {}     % Stile del testo
+
+\theoremstyle{mystyle}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{definition}[theorem]{Definizione}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollario}
+\newtheorem{proposition}[theorem]{Proposizione}
+
+% Pacchetti aggiuntivi
+\usepackage{enumitem}   % Gestione elenchi personalizzati
+\usepackage{multicol}   % Colonne multiple
+\usepackage{booktabs}   % Tabelle formattate professionalmente
+\usepackage{caption}    % Migliore gestione delle didascalie
+\captionsetup{
+    labelfont=bf,
+    font=small,
+    labelsep=colon
+}
+
+% Impostazioni di line spacing
+\usepackage{setspace}
+\onehalfspacing  % Interlinea 1.5 per migliorare la leggibilità
+
+% Informazioni del documento
+\title{\textbf{Trigonometria}}
+\author{\textit{Oudeys}}
+\date{\today}
+
+% Inizio del documento
+\begin{document}
+
+\maketitle
+
+
+\tableofcontents
+\newpage
+
+\section{Trigonometria piana}
+\subsection{Limitazioni}
+\(\lvert \sin x \rvert \leq 1 \)\\
+\(\lvert \cos x \rvert \leq 1 \)
+
+\subsection{Teorema di Pitagora}
+\(\sin ^2 x + \cos^2 x = 1\)
+
+\subsection{Archi opposti}
+\(\sin(-x) = - \sin x \)\\
+\(\cos (-x) = \cos x \)\\
+\(\tan (-x) = -\tan x \)
+
+
+\subsection{Archi complementari}
+\(\sin \left ( \frac{\pi}{2} -x \right) = \cos x \)\\
+\(\cos \left (\frac{\pi}{2}-x  \right) = \sin x \)\\
+\(\tan \left ( \frac{\pi}{2} -x\right) = \frac{1}{\tan x} \)
+
+\subsection{Archi supplementari}
+\(\sin(\pi - x) = \sin x \)\\
+\(\cos (\pi - x) = - \cos x \)\\
+\(\tan ( \pi - x) = - \tan x \)
+
+\subsection{Formule di duplicazione}
+\(\sin(2x) = 2\sin x \cos x \)\\
+\(\cos(2x) = \cos^2 x - \sin^2 x = \begin{cases} 1 - 2 \sin^2 x & \\
+2\cos^2 x - 1 \end{cases} \)\\
+\(\tan (2x) = \frac{2 \tan x}{1 - \tan^2 x} \)\\
+\(\sin^2(x)\cos^2(x) = \frac{1}{4}\sin^2 (2x) = \left( \frac{\sin(2x)}{2}\right)^2 \)
+
+\subsection{Formule parametriche}
+\(\forall \, t = \frac{\tan x}{2}\)\\
+\(\sin x = \frac{2t}{1 + t^2} \)\\
+\(\cos x = \frac{1 - t^2}{1 + t^2} \)\\
+\(\tan x = \frac{2t}{1 - t^2} \)
+
+
+\subsection{Formule di addizione}
+\(\sin(x \pm y) = \sin x \cos y \pm \cos x \sin y \)\\
+\(\cos(x \pm y) = \cos x \cos y \mp \sin x \sin y \)\\
+\(\tan (x \pm y) = \frac{\tan x \pm \tan y}{1 \mp \tan x \cdot \tan y} \)
+
+\subsection{Formule di prostaferesi}
+\(\sin x + \sin y = 2 \sin \frac{x+y}{2} \cos \frac{x-y}{2} \)\\
+\(cos x + \cos y = 2 \cos \frac{x+y}{2} \cos \)\\
+\(\tan x + \tan y = \frac{\sin(x+y)}{\cos x \cos y} \)
+
+\subsection{Formule di Werner}
+\(\sin x + \sin y = \frac{1}{2} (\cos(x-y) - \cos(x+y)) \)\\
+\(\cos x \cos y = \frac{1}{2} (\cos (x+y) + \cos (x-y)) \)\\
+\(\sin x \cos y = \frac{1}{2} (\sin(x+y) + \sin(x-y)) \)
+
+
+\subsection{Valori per angoli particolari}
+\scalebox{1}{
+\begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \( x \) & \( \cos x \) & \( \sin x \) & \( \tan x \) & \( \arctan x \) \\ % Riga di intestazione
+    \hline
+    \( 0 \)  & \( 1 \)  & \( 0 \)  & \( 0 \)  & \( \nexists \)  \\ % Riga 1
+    \hline
+    \( \frac{\pi}{12} \)  & \( \frac{\sqrt{6}+\sqrt{2}}{4} \)  & \( \frac{\sqrt{6}-\sqrt{2}}{4} \)   & \( 2-\sqrt{3} \)  & \( 2+\sqrt{3} \) \\ % Riga 2
+    \hline
+    \( \frac{\pi}{10} \) & \( \frac{\sqrt{10+2\sqrt{5}}}{4} \) & \( \frac{\sqrt{5}-1}{4} \) & \( \frac{\sqrt{25-10\sqrt{5}}}{5} \) & \( \sqrt{5+2\sqrt{5}} \) \\ % Riga 3
+    \hline
+    \( \frac{\pi}{8} \) & \( \frac{2+\sqrt{2}}{2} \) & \( \frac{\sqrt{2}-\sqrt{2}}{2} \) & \( \sqrt{2} -1 \) & \( \sqrt{2}+1 \) \\ % Riga 4
+    \hline
+    \( \frac{\pi}{6} \) & \( \frac{\sqrt{3}}{2} \) & \( \frac{1}{2} \) & \( \frac{1}{\sqrt{3}} \) & \( \sqrt{3} \) \\ % Riga 5
+    \hline
+    \( \frac{\pi}{5} \) & \( \frac{\sqrt{5}+1}{4} \) & \( \frac{\sqrt{10-2\sqrt{5}}}{4} \) & \( \sqrt{5-2\sqrt{5}} \) & \( \sqrt{10+2\sqrt{5}} \) \\ % Riga 6
+    \hline
+    \( \frac{\pi}{4} \) & \( \frac{\sqrt{2}}{2} \) & \( \frac{\sqrt{2}}{2} \) & \( 1 \) & \( 1 \) \\ % Riga 7
+    \hline
+    \( \frac{3\pi}{10} \) & \( \frac{\sqrt{10-2\sqrt{5}}}{4} \) & \( \frac{\sqrt{5}+1}{4} \) & \( \sqrt{5+2\sqrt{5}} \) & \( \sqrt{5-2\sqrt{5}} \) \\ % Riga 8
+    \hline
+    \( \frac{\pi}{3} \) & \( \frac{1}{2} \) & \( \frac{\sqrt{3}}{2} \) & \( \sqrt{3} \) & \( \frac{1}{\sqrt{3}} \) \\ % Riga 9
+    \hline
+    \( \frac{3\pi}{8} \) & \( \frac{\sqrt{2}-\sqrt{2}}{2} \) & \( \frac{2+\sqrt{2}}{2} \) & \( \sqrt{2}+1 \) & \( \sqrt{2}-1 \) \\ % Riga 10
+    \hline
+    \( \frac{2\pi}{5} \) & \( \frac{\sqrt{5}-1}{4} \) & \( \frac{\sqrt{10+2\sqrt{5}}}{4} \) & \( \sqrt{25-10\sqrt{5}} \) & \( \frac{\sqrt{5}-1}{4} \) \\ % Riga 11
+    \hline
+    \( \frac{5\pi}{12} \) & \( \frac{\sqrt{6}-\sqrt{2}}{4} \) & \( \frac{\sqrt{6}+\sqrt{2}}{4} \) & \( \sqrt{3}+2 \) & \( 2-\sqrt{3} \) \\ % Riga 12
+    \hline
+    \( \frac{\pi}{2} \) & \( 0 \) & \( 1 \) & \( \nexists \) & \( 0 \) \\ % Riga 13
+    \hline
+    \( \pi \) & \( -1 \) & \( 0 \) & \( 0 \) & \( \nexists \) \\ % Riga 14
+    \hline
+    \( \frac{3\pi}{2} \) & \( 0 \) & \( -1 \) & \( \nexists \) & \( 0 \) \\ % Riga 15
+    \hline
+    \( 2\pi \) & \( 1 \) & \( 0 \) & \( 0 \) & \( \nexists \) \\ % Riga 16
+    \hline
+\end{tabular}
+}
+
+\section{Trigonometria sferica}
+
+\end{document}

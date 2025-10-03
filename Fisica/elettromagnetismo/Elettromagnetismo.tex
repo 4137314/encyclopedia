@@ -1,0 +1,360 @@
+\documentclass[a4paper,12pt]{article}
+
+% Pacchetti per la matematica e simboli
+\usepackage{amsmath}    % Formule matematiche
+\usepackage{amssymb}    % Simboli matematici
+\usepackage{amsfonts}   % Font matematici
+\usepackage{mathrsfs}   % Scrittura calligrafica matematica
+\usepackage{amsthm}     % Teoremi e definizioni
+
+% Pacchetti per grafici
+\usepackage{graphicx}   % Inclusione grafica
+\usepackage{tikz}       % Disegni e grafici
+\usepackage{pgfplots}   % Grafici avanzati
+\pgfplotsset{compat=1.18} % Imposta compatibilità per pgfplots
+
+% Pacchetti per la gestione degli indici e riferimenti
+\usepackage{hyperref}   % Riferimenti ipertestuali
+\hypersetup{
+    colorlinks=true,    % Colori per i link
+    linkcolor=darkblue, % Colore dei link interni
+    citecolor=darkblue, % Colore dei riferimenti alle citazioni
+    filecolor=darkblue, % Colore dei link ai file
+    urlcolor=darkblue,  % Colore degli URL
+    pdftitle={Algebra elementare},
+    pdfpagemode=UseOutlines
+}
+\usepackage{tocbibind}  % Include l'indice e la bibliografia nel sommario
+\usepackage{fancyhdr}   % Intestazioni e piè di pagina personalizzati
+\usepackage{bookmark}   % Gestione segnalibri PDF
+
+% Configurazione per intestazioni e piè di pagina
+\setlength{\headheight}{15pt} % Altezza dell'intestazione
+\addtolength{\topmargin}{-10pt} % Riduzione del margine superiore
+
+\pagestyle{fancy}
+\fancyhf{}  % Pulisce intestazione e piè di pagina
+\fancyhead[L]{Algebra elementare}  % Intestazione sinistra
+\fancyhead[R]{\today}                      % Intestazione destra
+\fancyfoot[C]{\thepage}                    % Numero di pagina al centro
+
+% Impostazioni dei margini
+\usepackage{geometry}
+\geometry{
+    left=1.2in,
+    right=1.2in,
+    top=1in,
+    bottom=1.2in
+}
+
+% Gestione delle sezioni e sottosezioni
+\usepackage{titlesec}
+\titleformat{\section}[block]{\large\scshape}{\thesection}{1em}{} % Titoli sezioni maiuscoli
+\titleformat{\subsection}[block]{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[block]{\normalsize\itshape}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[runin]{\normalsize\bfseries}{\theparagraph}{1em}{}[:]
+\titleformat{\subparagraph}[runin]{\normalsize\itshape}{\thesubparagraph}{1em}{}[:]
+
+% Colore e aspetto
+\usepackage{xcolor}
+\definecolor{darkblue}{rgb}{0.0, 0.2, 0.6}
+\definecolor{gray}{rgb}{0.5, 0.5, 0.5}
+
+% Teoremi e definizioni formali
+\newtheoremstyle{mystyle} % Definisci lo stile del teorema
+  {10pt} % Spaziatura sopra
+  {10pt} % Spaziatura sotto
+  {\itshape} % Corpo del teorema in corsivo
+  {} % Indentazione del numero
+  {\bfseries} % Font del titolo
+  {}     % Punteggiatura dopo il titolo
+  {\newline} % Spazio dopo il titolo
+  {}     % Stile del testo
+
+\theoremstyle{mystyle}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{definition}[theorem]{Definizione}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollario}
+\newtheorem{proposition}[theorem]{Proposizione}
+
+% Pacchetti aggiuntivi
+\usepackage{enumitem}   % Gestione elenchi personalizzati
+\usepackage{multicol}   % Colonne multiple
+\usepackage{booktabs}   % Tabelle formattate professionalmente
+\usepackage{caption}    % Migliore gestione delle didascalie
+\captionsetup{
+    labelfont=bf,
+    font=small,
+    labelsep=colon
+}
+
+% Impostazioni di line spacing
+\usepackage{setspace}
+\onehalfspacing  % Interlinea 1.5 per migliorare la leggibilità
+
+% Informazioni del documento
+\title{\textbf{Elettromagnetismo}}
+\author{\textit{Oudeys}}
+\date{\today}
+
+% Inizio del documento
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+
+\section{Elettrostatica}
+\subsection{Polarizzazione dei dielettrici}
+\subsubsection{Costante dielettrica del vuoto}
+\[\epsilon_0 = 8.85 \cdot 10^{-12} \frac{C^2}{N \cdot m^2}\]
+\subsubsection{Costante dielettrica relativa}
+\[\epsilon_r = \frac{\epsilon}{\epsilon_0}\]
+\subsubsection{Costante dielettrica assoluta}
+\[\epsilon = \epsilon_r \cdot \epsilon_0\]
+
+\newpage
+
+\subsection{Carica elettrica e legge di Coulumb}
+\subsubsection{Carica elettrica}
+\([Q]=[T][i]\)\\
+\(C\)
+\subsubsection{Legge di Coulumb}
+\[F = K \cdot \frac{Q_1 \cdot Q_2}{r^2}\]
+\paragraph{Costante di Coulumb}
+\(K = \frac{1}{4 \pi \epsilon} = \frac{1}{4\pi \epsilon_0 \epsilon_r}\)
+\subsubsection{Legge di Coulumb nel vuoto}
+\[F = K_0 \cdot \frac{Q_1 \cdot Q_2}{r^2}\]
+\paragraph{Costante di Coulumb nel vuoto}
+\(K_0 = \frac{1}{4 \pi \epsilon_0} = 9 \cdot 10^9 \frac{N \cdot m^2}{C^2}\)
+
+\newpage
+
+
+\subsection{Campo elettrico}
+\subsubsection{Intensità del campo elettrico}
+\([E]=[L][M][T]^{-3}[i]^{-1}\)\\
+\(\frac{N}{C}=\frac{V}{m}\)\\
+
+\[
+\begin{aligned}
+    E &= \frac{F}{q} \\
+    &= K \cdot \frac{Q \cdot q}{r^2} \cdot \frac{1}{q}\\
+    &= K \cdot \frac{Q}{r^2}
+\end{aligned}\]\\
+\[\textbf{E} = \lim_{q \rightarrow 0} \frac{\textbf{F}}{q}\]
+\subsubsection{Principio di sovrapposizione}
+\[
+\begin{aligned}
+    \textbf{E} &= \textbf{E}_1 + \textbf{E}_2 + \ldots + \textbf{E}_n \\
+    &= \sum_i \textbf{E}_i
+\end{aligned}\]
+\subsubsection{Campo generato da un dipolo elettrico}
+\[E_r = k \cdot \frac{2 p \cdot \cos \theta}{r^3}\]\\
+\[E_\theta = k \cdot \frac{2p \cdot \sin \theta}{r^3}\]
+\paragraph{Momento di dipolo}
+\[\vec p = q \cdot \vec a\]
+
+\newpage
+
+
+\subsection{Energia potenziale elettrica}
+\([E_p]=[L]^2[M][T]^{-2}\)\\
+\(J\)\\
+\[E_p = K \cdot \frac{Q \cdot q}{r}\]
+
+\newpage
+
+
+\subsection{Potenziale elettrico}
+\([V_p]=[L]^2[M][T]^{-3}[i]^{-1}\)\\
+\(V= \frac{J}{C}\)\\
+\[\begin{aligned}
+    V_p &= \frac{E_p}{q} \\
+    &= K \cdot \frac{Q \cdot q}{r} \cdot \frac{1}{q}\\
+    &= K \cdot \frac{Q}{r}
+\end{aligned}\]
+\subsubsection{Potenziale elettrico per un sistema di cariche}
+\[
+\begin{aligned}
+    V & = V_1 + V_2 + \ldots + V_n\\
+    &= K \cdot \left( \frac{Q_1}{r_1} + \frac{Q_2}{r_2} + \ldots + \frac{Q_n}{r_n}\right ) \\
+    &= \sum_i V_i\\
+    &= \sum_i \frac{Q_i}{r_i}
+\end{aligned}\]
+\subsubsection{Potenziale generato da un dipolo elettrico}
+\[V = K \cdot \frac{p \cdot \cos \theta}{r^2}\]\\
+\(\theta < \frac{\pi}{2} \Rightarrow V >0\)\\
+\(\theta > \frac{\pi}{2} \Rightarrow V < 0\)
+\subsubsection{Tensione - Differenza di potenziale elettrico}
+\[V_A - V_B\]\\
+\[
+\begin{aligned}
+    L_{a \rightarrow B}& = E_A - E_B \\
+    &= - \Delta E \\
+    &= q \cdot (V_A - V_B)\\
+    &= -q \cdot \Delta V
+\end{aligned}\]
+\subsubsection{Superfici equipotenziali}
+\[L = q \cdot (V_A - V_B) = 0\]
+
+
+\newpage
+
+
+\subsection{Teorema di Gauss}
+\subsubsection{Flusso di un vettore}
+\[\Phi_S (\textbf{E}) = \textbf{E} \cdot \textbf{S} = E \cdot S \cdot \cos \theta = E_n \cdot S\]
+\subsubsection{Teorema di Gauss}
+\[\Phi_S (\textbf{E}) = \frac{Q}{\epsilon _0}\]\\
+\[\Phi _S (\textbf{E}) = \frac{1}{\epsilon_0} \cdot \sum_i Q_i\]
+\subsubsection{Conduttore sferico}
+\[E = K \cdot \frac{Q}{l^2}\]\\
+\[V = K \cdot \frac{Q}{l}\]
+\subsubsection{Campo elettrico generato da un piano infinito di carica}
+\[E = \frac{\sigma}{2 \epsilon_0}\]
+\paragraph{Densità superficiale di carica elettrica}
+\[\sigma = \frac{\Delta Q}{\Delta S}\]
+
+\newpage
+
+ 
+\subsection{Capacità di una conduttore}
+\subsubsection{Capacità elettrostatica}
+\([C]=[L]^{-2}[M]^{-1}[T]^4[i]^2\)\\
+\[C = \frac{Q}{V}\]\\
+\[F= \frac{C}{V}\]
+\subsubsection{Capacità di un conduttore sferico}
+\[C = \frac{Q}{V} = \frac{Q \cdot R}{K \cdot Q} = \frac{R}{K} = 4 \pi \epsilon_0 \cdot R\]
+
+
+\newpage
+
+
+\subsection{Condensatori}
+\subsubsection{Capacità di un condensatore}
+\[C = \frac{Q}{\Delta V}\]
+\subsubsection{Condensatore piano}
+\[C = \epsilon \cdot \frac{S}{d}\]
+\subsubsection{Condensatore sferico}
+\[C = \frac{4 \pi \epsilon \cdot R_1 \cdot R_2}{R_2 - R_1}\]
+\subsubsection{Condensatore cilindrico}
+\[C = \frac{2 \pi \epsilon \cdot l}{\log \left(\frac{R_2}{R_1} \right )}\]
+\subsubsection{Effetto di un dielettrico in un condensatore}
+\[\frac{C}{C_0} = \epsilon_r\]
+\subsubsection{Lavoro di carica di un condensatore}
+\[L = \frac{1}{2} \cdot \frac{Q^2}{C} = \frac{1}{2} \cdot C \cdot \Delta V^2\]
+\subsubsection{Condensatori in parallelo}
+\[C_1 = \frac{Q_1}{\Delta V } \ldots C_n = \frac{Q_n}{\Delta V}\]
+\paragraph{Capacità equivalente}
+\[
+{C_{eq}= C_1+C_2+ \ldots + C_n = \frac{Q_1+Q_2+\ldots+Q_n}{\Delta V} = \frac{Q}{\Delta V}}
+\]
+\paragraph{Condensatori in serie}
+\[\frac{1}{C_{eq}} = \frac{1}{C_1}+\frac{1}{C_2} + \ldots + \frac{1}{C_n}\]
+\paragraph{Elettronvolt}
+\[L =q \cdot \Delta V\]
+
+\newpage
+
+
+\section{Corrente elettrica}
+\subsection{Intensità di corrente}
+\([i]\)\\
+\(A= \frac{C}{s}\)\\
+\[i = \frac{\Delta Q}{\Delta t}\]
+
+\subsubsection{Effetto Volta}
+\[L = e \cdot V_i\]
+\subsubsection{Forza elettromotrice}
+\([fem]=[L]^2[M][T]^{-3}[i]^{-1}\)\\
+\(V= \frac{J}{C}\)\\
+\[fem = \frac{\Delta L}{\Delta q}\]
+
+\newpage
+
+
+\subsection{Le leggi di Ohm}
+\subsubsection{I legge di Ohm}
+\[V_B-V_A = \Delta V = R \cdot i \Leftrightarrow R = \frac{\Delta V}{i}\]
+\paragraph{Resistenza}
+\[R = R_0 \cdot(1 + \alpha \cdot t)\]
+\paragraph{Conduttanza}
+\[c = \frac{1}{R}\]
+\subsubsection{II legge di Ohm}
+\[R = \rho \cdot \frac{l}{S}\]
+\paragraph{Conducibilità del materiale}
+\[\lambda = \frac{1}{\rho}\]
+\subparagraph{Resistività dei metalli}
+\[\rho = \rho_0 \cdot (1 + \alpha \cdot t)\]
+
+\newpage
+
+
+\subsection{Effetto Joule}
+\subsubsection{Energia dissipata}
+\[L = R \cdot i ^2 \cdot \Delta t = \Delta V \cdot i \cdot \Delta t = \frac{(\Delta V)^2}{R} \cdot \Delta t\]
+\subsubsection{Potenza dissipata}
+\[P = \frac{L}{\Delta t} = R \cdot i^2 \cdot = \Delta V \cdot i = \frac{(\Delta V)^2}{R}\]
+\subsubsection{Calore dissipato}
+\[ Q = \frac{R \cdot i^2 \cdot \Delta t}{4,186  J/cal}\]
+
+\newpage
+
+
+\subsection{Resistenze in serio e in parallelo}
+\subsubsection{Resistenze in serie}
+\[R_{eq}= R_1 + R_2 + \ldots + R_n = \sum_i R_i\]
+\subsubsection{Resistenze in parallelo}
+\[\frac{1}{R_{eq}} = \frac{1}{R_1}+ \frac{1}{R_2}+ \ldots + \frac{1}{R_n} = \sum_i \frac{1}{R_i}\]
+\subsubsection{Legge di Ohm per i circuiti chiusi}
+\[fem = (R+r) \cdot i = \Delta V + r \cdot i\]
+
+\newpage
+
+
+\subsection{Leggi di Kirchoff}
+\subsubsection{I legge di Kirchoff}
+\[\sum_i i_i = 0\]
+\subsubsection{II legge di Kirchoff}
+\[\sum_i fem _i = \sum_i i_i \cdot R_i\]
+
+\newpage
+
+
+\subsection{Corrente elettrica nei liquidi}
+\subsubsection{Leggi di Faraday}
+\paragraph{I legge di Faraday}
+\[M = k \cdot Q\]
+\paragraph{II legge di Faraday}
+
+\newpage
+
+
+\subsection{Corrente elettrica nei gas}
+\subsubsection{Legge di Paschen}
+\[V = k \cdot P \cdot d\]
+
+
+\newpage
+
+
+\section{Magnetismo}
+\subsection{Campo magnetico}
+\newpage
+
+\subsection{Campo magnetico generato da una corrente elettrica}
+\newpage
+
+\subsection{Induzione elettromagnetica}
+\newpage
+
+\subsection{Correnti alternate}
+\newpage
+
+\subsection{Elettromagnetismo}
+
+\end{document}

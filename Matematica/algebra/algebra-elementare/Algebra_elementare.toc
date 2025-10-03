@@ -1,0 +1,65 @@
+\contentsline {section}{Contents}{1}{Doc-Start}%
+\contentsline {section}{\numberline {1}Insiemistica}{4}{section.1}%
+\contentsline {section}{\numberline {2}Calcolo letterale}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Frazioni}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Proporzioni}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Potenze}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Radicali}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Logaritmi}{4}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Esponenziali}{4}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Regole di scomposizione polinomi}{4}{subsection.2.7}%
+\contentsline {subsubsection}{\numberline {2.7.1}Sviluppo del quadrato}{5}{subsubsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.2}Sviluppo del cubo di un binomio}{5}{subsubsection.2.7.2}%
+\contentsline {subsubsection}{\numberline {2.7.3}Somma di cubi}{5}{subsubsection.2.7.3}%
+\contentsline {subsubsection}{\numberline {2.7.4}Differenza di cubi}{5}{subsubsection.2.7.4}%
+\contentsline {subsubsection}{\numberline {2.7.5}Differenza di potenze con uguale esponente}{5}{subsubsection.2.7.5}%
+\contentsline {subsubsection}{\numberline {2.7.6}Differenza di potenze con uguale esponente pari}{5}{subsubsection.2.7.6}%
+\contentsline {subsubsection}{\numberline {2.7.7}Differenza di potenze con uguale esponente dispari}{5}{subsubsection.2.7.7}%
+\contentsline {subsubsection}{\numberline {2.7.8}Trinomio caratteristico di secondo grado}{5}{subsubsection.2.7.8}%
+\contentsline {subsubsection}{\numberline {2.7.9}Trinomio di secondo grado}{6}{subsubsection.2.7.9}%
+\contentsline {subsection}{\numberline {2.8}Divisone fra polinomi}{7}{subsection.2.8}%
+\contentsline {subsubsection}{\numberline {2.8.1}Regole di divisibilità somma/differenza potenze aventi stesso esponente}{7}{subsubsection.2.8.1}%
+\contentsline {section}{\numberline {3}Calcolo combinatorio}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Fattoriale e semifattoriale}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Coefficiente binomiale}{8}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Insiemi numerici}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Numeri naturali}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Numeri interi}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Numeri razionali}{9}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Numeri irrazionali}{9}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Numeri reali}{9}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Numeri complessi}{9}{subsection.4.6}%
+\contentsline {subsubsection}{\numberline {4.6.1}Potenze unità immaginaria}{9}{subsubsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.2}Numeri immaginari}{9}{subsubsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.3}Rappresentazione algebrica numeri complessi}{9}{subsubsection.4.6.3}%
+\contentsline {subsubsection}{\numberline {4.6.4}Addizione}{9}{subsubsection.4.6.4}%
+\contentsline {subsubsection}{\numberline {4.6.5}Moltiplicazione}{9}{subsubsection.4.6.5}%
+\contentsline {subsubsection}{\numberline {4.6.6}Parte reale}{9}{subsubsection.4.6.6}%
+\contentsline {subsubsection}{\numberline {4.6.7}Parte immaginaria}{10}{subsubsection.4.6.7}%
+\contentsline {subsubsection}{\numberline {4.6.8}Reciproco complesso}{10}{subsubsection.4.6.8}%
+\contentsline {subsubsection}{\numberline {4.6.9}Complesso coniugato}{10}{subsubsection.4.6.9}%
+\contentsline {subsubsection}{\numberline {4.6.10}Modulo}{10}{subsubsection.4.6.10}%
+\contentsline {subsubsection}{\numberline {4.6.11}Argomento}{10}{subsubsection.4.6.11}%
+\contentsline {subsubsection}{\numberline {4.6.12}Rappresentazione trigonometrica}{10}{subsubsection.4.6.12}%
+\contentsline {subsubsection}{\numberline {4.6.13}Quadrato di un numero complesso}{10}{subsubsection.4.6.13}%
+\contentsline {subsubsection}{\numberline {4.6.14}Formula di De Moivre per la potenza n-esima}{10}{subsubsection.4.6.14}%
+\contentsline {subsubsection}{\numberline {4.6.15}Rappresentazione esponenziale}{11}{subsubsection.4.6.15}%
+\contentsline {subsubsection}{\numberline {4.6.16}Radici complesse}{11}{subsubsection.4.6.16}%
+\contentsline {subsubsection}{\numberline {4.6.17}Radici equazione quadratica}{11}{subsubsection.4.6.17}%
+\contentsline {section}{\numberline {5}Equazioni algebriche}{12}{section.5}%
+\contentsline {section}{\numberline {6}Disequazioni algebriche}{12}{section.6}%
+\contentsline {section}{\numberline {7}Funzioni}{12}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Funzione simmetrica}{12}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Funzione elementari}{12}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Funzioni lineari}{12}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}Funzioni quadratiche}{12}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Funzioni potenza}{12}{subsubsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.4}Funzioni esponenziali}{14}{subsubsection.7.2.4}%
+\contentsline {subsubsection}{\numberline {7.2.5}Funzioni logaritmiche}{14}{subsubsection.7.2.5}%
+\contentsline {subsubsection}{\numberline {7.2.6}Funzioni trigonometriche}{14}{subsubsection.7.2.6}%
+\contentsline {subsection}{\numberline {7.3}Potenze}{15}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Logaritmi}{15}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Iperboliche}{15}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Successioni}{16}{subsection.7.6}%
+\contentsline {section}{\numberline {8}Curve}{16}{section.8}%
+\contentsline {section}{\numberline {9}Superfici}{16}{section.9}%

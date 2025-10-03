@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Introduzione}{2}{section.1}%
+\contentsline {section}{\numberline {2}Misura di Tensione}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Descrizione dell'Esperimento}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Dati e Confronto Teorico-Sperimentale}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Stima della Resistenza Interna del Multimetro}{3}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Verifica del Teorema di Millman}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Descrizione dell'Esperimento}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Applicazione del teorema nel circuito sperimentale}{3}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Stima della corrente di lato}{4}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Osservazioni}{4}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Caratteristica I/V del Resistore}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Descrizione dell'esperimento}{4}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Relazione tra I e V}{4}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Conclusioni}{5}{section.5}%

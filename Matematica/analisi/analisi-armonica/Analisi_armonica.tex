@@ -1,0 +1,76 @@
+\documentclass[a4paper,12pt]{article}
+
+% Pacchetti fondamentali
+\usepackage{amsmath}    % Per le formule matematiche
+\usepackage{amsfonts}   % Per i font matematici
+\usepackage{amssymb}    % Per i simboli matematici
+\usepackage{geometry}   % Per la gestione delle dimensioni della pagina
+\usepackage{fancyhdr}   % Per intestazioni e piè di pagina
+\usepackage{hyperref}   % Per i collegamenti ipertestuali
+\usepackage{multicol}   % Per colonne multiple
+
+
+% Configurazione della pagina
+\geometry{left=2cm, right=2cm, top=2cm, bottom=2cm}
+
+% Intestazioni e piè di pagina
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Analisi armonica}
+\fancyhead[R]{\thepage}
+
+% Configurazione di hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    pdftitle={Analisi armonica},
+    pdfpagemode=UseOutlines,
+    pdfauthor={Autore},
+    pdfsubject={Formulario},
+    pdfkeywords={Matematica, Formulario}
+}
+
+% Definizioni di teoremi e definizioni
+\usepackage{amsthm}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{definition}[theorem]{Definizione}
+\newtheorem{corollary}[theorem]{Corollario}
+\newtheorem{lemma}[theorem]{Lemma}
+
+% Nuove macro per simboli comuni
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\begin{document}
+
+\title{Analisi armonica}
+
+\maketitle
+
+\section{Trasformata di Laplace}
+
+\subsection{Trasformata di Laplace unilatera}
+\(\forall \, \Re p>a\)\\
+\[
+    F(p) = \int_{0}^{+\infty} e^{-px} f(x) dx
+\] 
+
+\subsection{Antitrasformata di Laplace}
+\[
+    \mathcal{L}^{-1} [F](x) = % Da finire
+\]
+
+\subsection{Trasfromate di Laplace delle funzioni elementari}
+
+
+
+
+\section{Trasformata di Fourier}
+
+
+\end{document}
+

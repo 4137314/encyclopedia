@@ -1,0 +1,23 @@
+\contentsline {section}{Contents}{1}{Doc-Start}%
+\contentsline {section}{\numberline {1}Introduzione}{2}{section.1}%
+\contentsline {section}{\numberline {2}Circuiti combinatori}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Porte logiche}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Operatori base}{2}{subsubsection.2.1.1}%
+\contentsline {paragraph}{AND}{2}{subsubsection.2.1.1}%
+\contentsline {paragraph}{OR}{2}{subsubsection.2.1.1}%
+\contentsline {paragraph}{NOT}{2}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Operatori completi}{3}{subsubsection.2.1.2}%
+\contentsline {paragraph}{NAND}{3}{subsubsection.2.1.2}%
+\contentsline {paragraph}{NOR}{3}{subsubsection.2.1.2}%
+\contentsline {paragraph}{XOR}{3}{subsubsection.2.1.2}%
+\contentsline {paragraph}{XNOR}{3}{subsubsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.2}Algebra di Boole}{3}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}Assiomi dell'algebra booleana}{3}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Teoremi dell'algebra booleana}{4}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Teorema di espansione di Shannon}{5}{subsubsection.2.2.3}%
+\contentsline {paragraph}{Forme canoniche}{5}{theorem.2.13}%
+\contentsline {subsection}{\numberline {2.3}Sintesi a due livelli}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Circuiti combinatori di base}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Diagrammi temporali}{7}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Circuiti aritmetici}{7}{section.3}%
+\contentsline {section}{\numberline {4}Circuiti sequenziali}{7}{section.4}%
